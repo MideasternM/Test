@@ -1,0 +1,731 @@
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+batch: 200, _loss: 8.368093
+batch: 400, _loss: 8.354291
+batch: 600, _loss: 8.569276
+batch: 800, _loss: 8.143134
+batch: 1000, _loss: 8.812245
+batch: 1200, _loss: 8.600273
+batch: 1400, _loss: 8.796081
+batch: 1600, _loss: 8.533671
+batch: 1800, _loss: 8.692974
+batch: 2000, _loss: 8.528893
+batch: 2200, _loss: 8.627911
+batch: 2400, _loss: 8.013747
+batch: 2600, _loss: 8.333388
+batch: 2800, _loss: 8.846090
+batch: 3000, _loss: 8.727053
+batch: 3200, _loss: 8.402767
+batch: 3400, _loss: 8.171980
+batch: 3600, _loss: 8.340357
+batch: 3800, _loss: 8.672126
+batch: 4000, _loss: 8.549733
+batch: 4200, _loss: 8.273794
+batch: 4400, _loss: 8.756907
+batch: 4600, _loss: 8.553970
+batch: 4800, _loss: 8.216997
+batch: 5000, _loss: 8.276426
+batch: 5200, _loss: 8.441574
+batch: 5400, _loss: 8.741926
+batch: 5600, _loss: 8.646465
+batch: 5800, _loss: 8.486664
+batch: 6000, _loss: 8.324981
+batch: 6200, _loss: 8.224927
+batch: 6400, _loss: 8.336725
+batch: 6600, _loss: 8.531381
+batch: 6800, _loss: 8.497958
+batch: 7000, _loss: 8.439053
+batch: 7200, _loss: 8.391882
+train 0, loss: 1.055471
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+batch: 200, _loss: 8.486111
+batch: 400, _loss: 8.388267
+batch: 600, _loss: 8.591079
+batch: 800, _loss: 8.181137
+batch: 1000, _loss: 8.891540
+batch: 1200, _loss: 8.488066
+batch: 1400, _loss: 8.669968
+batch: 1600, _loss: 8.512289
+batch: 1800, _loss: 8.740206
+batch: 2000, _loss: 8.416533
+batch: 2200, _loss: 8.659402
+batch: 2400, _loss: 8.215879
+batch: 2600, _loss: 8.599107
+batch: 2800, _loss: 8.649398
+batch: 3000, _loss: 8.856174
+batch: 3200, _loss: 8.472128
+batch: 3400, _loss: 8.169121
+batch: 3600, _loss: 8.387022
+batch: 3800, _loss: 8.670701
+batch: 4000, _loss: 8.606968
+batch: 4200, _loss: 8.333056
+batch: 4400, _loss: 8.566705
+batch: 4600, _loss: 8.444566
+batch: 4800, _loss: 8.343587
+batch: 5000, _loss: 8.237709
+batch: 5200, _loss: 8.502484
+batch: 5400, _loss: 8.693338
+batch: 5600, _loss: 8.589772
+batch: 5800, _loss: 8.406059
+batch: 6000, _loss: 8.353556
+batch: 6200, _loss: 8.247386
+batch: 6400, _loss: 8.282930
+batch: 6600, _loss: 8.524534
+batch: 6800, _loss: 8.450449
+batch: 7000, _loss: 8.384372
+batch: 7200, _loss: 8.317621
+train 0, loss: 1.057392
+consistency score: 0.07149420970425353
+test aver acc: {0: tensor(0.6422), 1: tensor(0.5189), 2: tensor(0.4390), 3: tensor(0.2920), 4: tensor(0.2324)}
+eval avg class IoU: 0.33777524684868787
+0.2624363766565849
+0.16583581231101457
+0.07596159427476529
+0.04054912397562446
+___________________epoch 1_____________________
+batch: 200, _loss: 8.484516
+batch: 400, _loss: 8.592906
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+batch: 200, _loss: 8.325482
+batch: 400, _loss: 8.334333
+batch: 600, _loss: 8.606937
+batch: 800, _loss: 8.204236
+batch: 1000, _loss: 8.305075
+batch: 1200, _loss: 8.454983
+batch: 1400, _loss: 8.607744
+batch: 1600, _loss: 8.242906
+batch: 1800, _loss: 8.390316
+batch: 2000, _loss: 8.220119
+batch: 2200, _loss: 8.610420
+batch: 2400, _loss: 8.183019
+batch: 2600, _loss: 8.392323
+batch: 2800, _loss: 8.728194
+batch: 3000, _loss: 8.880402
+batch: 3200, _loss: 8.508592
+batch: 3400, _loss: 8.167037
+batch: 3600, _loss: 8.474287
+batch: 3800, _loss: 8.852036
+batch: 4000, _loss: 8.546535
+batch: 4200, _loss: 8.317349
+batch: 4400, _loss: 8.404612
+batch: 4600, _loss: 8.503443
+batch: 4800, _loss: 8.346053
+batch: 5000, _loss: 8.285028
+batch: 5200, _loss: 8.497979
+batch: 5400, _loss: 8.590825
+batch: 5600, _loss: 8.627740
+batch: 5800, _loss: 8.394824
+batch: 6000, _loss: 8.342779
+batch: 6200, _loss: 8.130857
+batch: 6400, _loss: 8.217875
+batch: 6600, _loss: 8.642852
+batch: 6800, _loss: 8.424950
+batch: 7000, _loss: 8.492257
+batch: 7200, _loss: 8.277225
+train 0, loss: 1.051097
+consistency score: 0.08298999732408786
+test aver acc: {0: tensor(0.6416), 1: tensor(0.5346), 2: tensor(0.4615), 3: tensor(0.3007), 4: tensor(0.2131)}
+eval avg class IoU: 0.33803347914053533
+0.2726191455658857
+0.17259001311396652
+0.07693803247797407
+0.03760086364126716
+___________________epoch 1_____________________
+batch: 200, _loss: 8.547891
+batch: 400, _loss: 8.626749
+batch: 600, _loss: 8.494631
+batch: 800, _loss: 8.569391
+batch: 1000, _loss: 8.297819
+batch: 1200, _loss: 8.508575
+batch: 1400, _loss: 8.040752
+batch: 1600, _loss: 8.380444
+batch: 1800, _loss: 8.260303
+batch: 2000, _loss: 8.120744
+batch: 2200, _loss: 8.215753
+batch: 2400, _loss: 8.219313
+batch: 2600, _loss: 8.433531
+batch: 2800, _loss: 8.387468
+batch: 3000, _loss: 8.576887
+batch: 3200, _loss: 8.247106
+batch: 3400, _loss: 8.213283
+batch: 3600, _loss: 8.451063
+batch: 3800, _loss: 8.112852
+batch: 4000, _loss: 8.101159
+batch: 4200, _loss: 8.669120
+batch: 4400, _loss: 8.384308
+batch: 4600, _loss: 8.455557
+batch: 4800, _loss: 8.206971
+batch: 5000, _loss: 8.511029
+batch: 5200, _loss: 8.206664
+batch: 5400, _loss: 8.652259
+batch: 5600, _loss: 8.189787
+batch: 5800, _loss: 8.421287
+batch: 6000, _loss: 7.960308
+batch: 6200, _loss: 8.091258
+batch: 6400, _loss: 8.047455
+batch: 6600, _loss: 8.541615
+batch: 6800, _loss: 8.367529
+batch: 7000, _loss: 8.351124
+batch: 7200, _loss: 8.329833
+train 1, loss: 1.040600
+___________________epoch 2_____________________
+batch: 200, _loss: 8.380908
+batch: 400, _loss: 8.381808
+batch: 600, _loss: 8.228611
+batch: 800, _loss: 8.436990
+batch: 1000, _loss: 8.361690
+batch: 1200, _loss: 8.011350
+batch: 1400, _loss: 8.540484
+batch: 1600, _loss: 8.273922
+batch: 1800, _loss: 8.289826
+batch: 2000, _loss: 8.360810
+batch: 2200, _loss: 8.398172
+batch: 2400, _loss: 8.294598
+batch: 2600, _loss: 8.345165
+batch: 2800, _loss: 8.068060
+batch: 3000, _loss: 8.277406
+batch: 3200, _loss: 8.250842
+batch: 3400, _loss: 8.427936
+batch: 3600, _loss: 8.464436
+batch: 3800, _loss: 8.366612
+batch: 4000, _loss: 8.222514
+batch: 4200, _loss: 8.598987
+batch: 4400, _loss: 8.640855
+batch: 4600, _loss: 8.607539
+batch: 4800, _loss: 8.545056
+batch: 5000, _loss: 8.350948
+batch: 5200, _loss: 8.233837
+batch: 5400, _loss: 8.163558
+batch: 5600, _loss: 8.477336
+batch: 5800, _loss: 8.318340
+batch: 6000, _loss: 7.756469
+batch: 6200, _loss: 8.236992
+batch: 6400, _loss: 8.218165
+batch: 6600, _loss: 8.276680
+batch: 6800, _loss: 8.354753
+batch: 7000, _loss: 8.537136
+batch: 7200, _loss: 8.072768
+train 2, loss: 1.042943
+___________________epoch 3_____________________
+batch: 200, _loss: 8.549066
+batch: 400, _loss: 8.346331
+batch: 600, _loss: 8.586190
+batch: 800, _loss: 8.684134
+batch: 1000, _loss: 8.441655
+batch: 1200, _loss: 8.327468
+batch: 1400, _loss: 7.987130
+batch: 1600, _loss: 8.191769
+batch: 1800, _loss: 8.294415
+batch: 2000, _loss: 8.325358
+batch: 2200, _loss: 8.563289
+batch: 2400, _loss: 8.921112
+batch: 2600, _loss: 8.380859
+batch: 2800, _loss: 8.277814
+batch: 3000, _loss: 8.054459
+batch: 3200, _loss: 8.462131
+batch: 3400, _loss: 8.117791
+batch: 3600, _loss: 8.328530
+batch: 3800, _loss: 8.404740
+batch: 4000, _loss: 8.420172
+batch: 4200, _loss: 8.729256
+batch: 4400, _loss: 8.508283
+batch: 4600, _loss: 8.626655
+batch: 4800, _loss: 8.569597
+batch: 5000, _loss: 8.633084
+batch: 5200, _loss: 8.231245
+batch: 5400, _loss: 8.034061
+batch: 5600, _loss: 8.875444
+batch: 5800, _loss: 8.200308
+batch: 6000, _loss: 8.423287
+batch: 6200, _loss: 8.413594
+batch: 6400, _loss: 8.280662
+batch: 6600, _loss: 8.483604
+batch: 6800, _loss: 8.843635
+batch: 7000, _loss: 8.364346
+batch: 7200, _loss: 8.364002
+train 3, loss: 1.048534
+consistency score: 0.04418822605931218
+test aver acc: {0: tensor(0.5571), 1: tensor(0.4298), 2: tensor(0.3361), 3: tensor(0.1986), 4: tensor(0.1628)}
+eval avg class IoU: 0.2868306733545734
+0.22755678881168517
+0.13866745528805935
+0.0563440231118737
+0.0281755252611493
+___________________epoch 4_____________________
+batch: 200, _loss: 8.308443
+batch: 400, _loss: 8.102885
+batch: 600, _loss: 8.304437
+batch: 800, _loss: 8.343613
+batch: 1000, _loss: 8.324142
+batch: 1200, _loss: 8.357618
+batch: 1400, _loss: 8.270966
+batch: 1600, _loss: 8.433944
+batch: 1800, _loss: 8.462849
+batch: 2000, _loss: 8.584953
+batch: 2200, _loss: 8.382983
+batch: 2400, _loss: 8.516943
+batch: 2600, _loss: 8.681587
+batch: 2800, _loss: 8.598786
+batch: 3000, _loss: 8.723108
+batch: 3200, _loss: 8.614187
+batch: 3400, _loss: 8.327331
+batch: 3600, _loss: 8.324066
+batch: 3800, _loss: 8.381922
+batch: 4000, _loss: 8.220824
+batch: 4200, _loss: 8.437885
+batch: 4400, _loss: 8.649013
+batch: 4600, _loss: 8.348518
+batch: 4800, _loss: 8.237484
+batch: 5000, _loss: 8.214848
+batch: 5200, _loss: 8.491293
+batch: 5400, _loss: 8.254265
+batch: 5600, _loss: 8.299520
+batch: 5800, _loss: 8.209323
+batch: 6000, _loss: 8.576941
+batch: 6200, _loss: 8.637130
+batch: 6400, _loss: 7.998981
+batch: 6600, _loss: 8.489441
+batch: 6800, _loss: 8.461043
+batch: 7000, _loss: 8.442127
+batch: 7200, _loss: 8.547605
+train 4, loss: 1.049032
+___________________epoch 5_____________________
+batch: 200, _loss: 8.262687
+batch: 400, _loss: 8.296821
+batch: 600, _loss: 8.618881
+batch: 800, _loss: 8.196825
+batch: 1000, _loss: 8.519835
+batch: 1200, _loss: 8.416673
+batch: 1400, _loss: 8.155336
+batch: 1600, _loss: 8.593327
+batch: 1800, _loss: 8.344277
+batch: 2000, _loss: 8.743793
+batch: 2200, _loss: 8.594469
+batch: 2400, _loss: 8.174877
+batch: 2600, _loss: 8.361068
+batch: 2800, _loss: 8.065860
+batch: 3000, _loss: 8.704154
+batch: 3200, _loss: 8.433359
+batch: 3400, _loss: 8.313647
+batch: 3600, _loss: 8.232935
+batch: 3800, _loss: 8.294885
+batch: 4000, _loss: 8.597505
+batch: 4200, _loss: 8.521160
+batch: 4400, _loss: 8.352686
+batch: 4600, _loss: 8.306650
+batch: 4800, _loss: 8.566236
+batch: 5000, _loss: 8.415460
+batch: 5200, _loss: 8.225489
+batch: 5400, _loss: 8.596457
+batch: 5600, _loss: 8.506809
+batch: 5800, _loss: 8.404988
+batch: 6000, _loss: 8.303535
+batch: 6200, _loss: 8.199949
+batch: 6400, _loss: 8.230198
+batch: 6600, _loss: 8.457977
+batch: 6800, _loss: 8.329776
+batch: 7000, _loss: 8.533082
+batch: 7200, _loss: 8.739985
+train 5, loss: 1.051740
+___________________epoch 6_____________________
+batch: 200, _loss: 8.370669
+batch: 400, _loss: 8.400974
+batch: 600, _loss: 8.214734
+batch: 800, _loss: 8.508220
+batch: 1000, _loss: 8.182693
+batch: 1200, _loss: 8.474180
+batch: 1400, _loss: 8.323667
+batch: 1600, _loss: 8.433577
+batch: 1800, _loss: 8.403730
+batch: 2000, _loss: 8.566354
+batch: 2200, _loss: 8.610669
+batch: 2400, _loss: 8.334535
+batch: 2600, _loss: 8.383659
+batch: 2800, _loss: 8.637976
+batch: 3000, _loss: 8.200224
+batch: 3200, _loss: 8.550292
+batch: 3400, _loss: 8.280823
+batch: 3600, _loss: 8.347331
+batch: 3800, _loss: 8.662296
+batch: 4000, _loss: 8.641025
+batch: 4200, _loss: 8.599814
+batch: 4400, _loss: 8.201194
+batch: 4600, _loss: 8.473355
+batch: 4800, _loss: 8.429084
+batch: 5000, _loss: 8.234179
+batch: 5200, _loss: 8.328766
+batch: 5400, _loss: 8.345078
+batch: 5600, _loss: 8.673925
+batch: 5800, _loss: 8.506453
+batch: 6000, _loss: 8.563031
+batch: 6200, _loss: 8.769709
+batch: 6400, _loss: 8.609841
+batch: 6600, _loss: 8.711943
+batch: 6800, _loss: 8.251608
+batch: 7000, _loss: 8.945709
+batch: 7200, _loss: 8.217299
+train 6, loss: 1.049786
+consistency score: 0.07238383232792721
+test aver acc: {0: tensor(0.5756), 1: tensor(0.4670), 2: tensor(0.4080), 3: tensor(0.2603), 4: tensor(0.1984)}
+eval avg class IoU: 0.2813732805582437
+0.21875471432084737
+0.14144078743681002
+0.06947036272550522
+0.0372524388394229
+___________________epoch 7_____________________
+batch: 200, _loss: 8.225383
+batch: 400, _loss: 8.370273
+batch: 600, _loss: 8.362281
+batch: 800, _loss: 8.390792
+batch: 1000, _loss: 8.583861
+batch: 1200, _loss: 8.056489
+batch: 1400, _loss: 8.467422
+batch: 1600, _loss: 8.333633
+batch: 1800, _loss: 8.410172
+batch: 2000, _loss: 7.754357
+batch: 2200, _loss: 8.091859
+batch: 2400, _loss: 8.291063
+batch: 2600, _loss: 8.166026
+batch: 2800, _loss: 8.180099
+batch: 3000, _loss: 8.113541
+batch: 3200, _loss: 8.537500
+batch: 3400, _loss: 8.413375
+batch: 3600, _loss: 8.567205
+batch: 3800, _loss: 8.332690
+batch: 4000, _loss: 8.705885
+batch: 4200, _loss: 8.471972
+batch: 4400, _loss: 8.538619
+batch: 4600, _loss: 8.443185
+batch: 4800, _loss: 8.120654
+batch: 5000, _loss: 8.380632
+batch: 5200, _loss: 8.341768
+batch: 5400, _loss: 8.345875
+batch: 5600, _loss: 8.585237
+batch: 5800, _loss: 8.361971
+batch: 6000, _loss: 8.717727
+batch: 6200, _loss: 8.456817
+batch: 6400, _loss: 8.759867
+batch: 6600, _loss: 8.609041
+batch: 6800, _loss: 8.267035
+batch: 7000, _loss: 8.645644
+batch: 7200, _loss: 8.361193
+train 7, loss: 1.049618
+___________________epoch 8_____________________
+batch: 200, _loss: 8.368707
+batch: 400, _loss: 8.201485
+batch: 600, _loss: 8.287729
+batch: 800, _loss: 8.431726
+batch: 1000, _loss: 8.424798
+batch: 1200, _loss: 8.251379
+batch: 1400, _loss: 8.493102
+batch: 1600, _loss: 8.325370
+batch: 1800, _loss: 8.153507
+batch: 2000, _loss: 8.196274
+batch: 2200, _loss: 8.491314
+batch: 2400, _loss: 8.369695
+batch: 2600, _loss: 8.260724
+batch: 2800, _loss: 8.116551
+batch: 3000, _loss: 8.782167
+batch: 3200, _loss: 8.676269
+batch: 3400, _loss: 8.450256
+batch: 3600, _loss: 8.261453
+batch: 3800, _loss: 8.394069
+batch: 4000, _loss: 8.336055
+batch: 4200, _loss: 8.243749
+batch: 4400, _loss: 8.206828
+batch: 4600, _loss: 8.153067
+batch: 4800, _loss: 8.222028
+batch: 5000, _loss: 8.212823
+batch: 5200, _loss: 7.910180
+batch: 5400, _loss: 8.502059
+batch: 5600, _loss: 8.681747
+batch: 5800, _loss: 8.451615
+batch: 6000, _loss: 8.225100
+batch: 6200, _loss: 8.392997
+batch: 6400, _loss: 8.348017
+batch: 6600, _loss: 8.261159
+batch: 6800, _loss: 8.781734
+batch: 7000, _loss: 8.433206
+batch: 7200, _loss: 8.372035
+train 8, loss: 1.047083
+___________________epoch 9_____________________
+batch: 200, _loss: 8.231139
+batch: 400, _loss: 8.276648
+batch: 600, _loss: 8.699641
+batch: 800, _loss: 8.559469
+batch: 1000, _loss: 8.377799
+batch: 1200, _loss: 8.243921
+batch: 1400, _loss: 8.430440
+batch: 1600, _loss: 8.327553
+batch: 1800, _loss: 8.470968
+batch: 2000, _loss: 8.481358
+batch: 2200, _loss: 8.454306
+batch: 2400, _loss: 8.512229
+batch: 2600, _loss: 8.140605
+batch: 2800, _loss: 8.153373
+batch: 3000, _loss: 8.059820
+batch: 3200, _loss: 8.336045
+batch: 3400, _loss: 8.547379
+batch: 3600, _loss: 8.538748
+batch: 3800, _loss: 8.806031
+batch: 4000, _loss: 8.171575
+batch: 4200, _loss: 7.945017
+batch: 4400, _loss: 8.546728
+batch: 4600, _loss: 8.482859
+batch: 4800, _loss: 8.317939
+batch: 5000, _loss: 8.208891
+batch: 5200, _loss: 8.345401
+batch: 5400, _loss: 8.275282
+batch: 5600, _loss: 8.292458
+batch: 5800, _loss: 8.324539
+batch: 6000, _loss: 8.351147
+batch: 6200, _loss: 8.155678
+batch: 6400, _loss: 8.185908
+batch: 6600, _loss: 8.311464
+batch: 6800, _loss: 8.488297
+batch: 7000, _loss: 8.531307
+batch: 7200, _loss: 8.304844
+train 9, loss: 1.046085
+consistency score: 0.06759927597670792
+test aver acc: {0: tensor(0.5116), 1: tensor(0.3699), 2: tensor(0.2989), 3: tensor(0.1968), 4: tensor(0.1725)}
+eval avg class IoU: 0.2366734267632216
+0.16484411054801518
+0.09814224028516878
+0.05310056931710498
+0.03282308594421523
+___________________epoch 10_____________________
+batch: 200, _loss: 8.598050
+batch: 400, _loss: 8.341605
+batch: 600, _loss: 8.478705
+batch: 800, _loss: 8.586961
+batch: 1000, _loss: 8.182424
+batch: 1200, _loss: 8.402320
+batch: 1400, _loss: 8.199841
+batch: 1600, _loss: 8.366278
+batch: 1800, _loss: 8.252734
+batch: 2000, _loss: 8.321053
+batch: 2200, _loss: 8.643468
+batch: 2400, _loss: 8.513889
+batch: 2600, _loss: 8.230255
+batch: 2800, _loss: 8.204423
+batch: 3000, _loss: 8.350323
+batch: 3200, _loss: 8.238397
+batch: 3400, _loss: 8.134391
+batch: 3600, _loss: 8.875264
+batch: 3800, _loss: 8.504743
+batch: 4000, _loss: 8.333659
+batch: 4200, _loss: 8.282653
+batch: 4400, _loss: 8.540474
+batch: 4600, _loss: 8.607292
+batch: 4800, _loss: 8.210613
+batch: 5000, _loss: 8.295012
+batch: 5200, _loss: 8.210753
+batch: 5400, _loss: 8.264659
+batch: 5600, _loss: 8.242389
+batch: 5800, _loss: 8.036406
+batch: 6000, _loss: 8.356063
+batch: 6200, _loss: 8.066061
+batch: 6400, _loss: 8.209588
+batch: 6600, _loss: 8.345189
+batch: 6800, _loss: 8.132940
+batch: 7000, _loss: 8.116381
+batch: 7200, _loss: 8.558920
+train 10, loss: 1.043078
+___________________epoch 11_____________________
+batch: 200, _loss: 8.424460
+batch: 400, _loss: 8.460681
+batch: 600, _loss: 8.967222
+batch: 800, _loss: 8.250762
+batch: 1000, _loss: 8.284796
+batch: 1200, _loss: 8.042795
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 14585
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 14585
+___________________epoch 0_____________________
+batch: 200, _loss: 8.461427
+Using GPU : 0 from 1 devices
+length of train loader: 14585
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 14585
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 14585
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 14585
+___________________epoch 0_____________________
+batch: 200, _loss: 8.464518
+batch: 400, _loss: 8.450095
+batch: 600, _loss: 8.529145
+batch: 800, _loss: 8.204681
+batch: 1000, _loss: 8.273078
+batch: 1200, _loss: 8.558393
+batch: 1400, _loss: 7.999797
+batch: 1600, _loss: 8.134234
+batch: 1800, _loss: 8.507606
+batch: 2000, _loss: 8.960852
+batch: 2200, _loss: 8.831800
+batch: 2400, _loss: 8.296573
+batch: 2600, _loss: 8.678942
+batch: 2800, _loss: 8.142742
+batch: 3000, _loss: 8.128773
+batch: 3200, _loss: 7.809684
+batch: 3400, _loss: 8.064554
+batch: 3600, _loss: 8.281216
+batch: 3800, _loss: 8.287890
+batch: 4000, _loss: 8.188529
+batch: 4200, _loss: 8.461196
+batch: 4400, _loss: 8.562696
+batch: 4600, _loss: 8.435569
+batch: 4800, _loss: 7.364877
+batch: 5000, _loss: 7.827700
+batch: 5200, _loss: 8.281094
+batch: 5400, _loss: 7.838407
+batch: 5600, _loss: 8.476604
+batch: 5800, _loss: 7.188161
+batch: 6000, _loss: 8.662694
+batch: 6200, _loss: 8.235601
+batch: 6400, _loss: 8.066112
+batch: 6600, _loss: 8.315111
+batch: 6800, _loss: 7.869137
+batch: 7000, _loss: 8.450496
+batch: 7200, _loss: 8.519756
+batch: 7400, _loss: 7.997791
+batch: 7600, _loss: 8.327788
+batch: 7800, _loss: 8.739475
+batch: 8000, _loss: 8.297241
+batch: 8200, _loss: 7.199456
+batch: 8400, _loss: 8.009981
+batch: 8600, _loss: 8.481761
+batch: 8800, _loss: 8.953291
+batch: 9000, _loss: 8.635803
+batch: 9200, _loss: 8.437195
+batch: 9400, _loss: 8.383531
+batch: 9600, _loss: 8.266932
+batch: 9800, _loss: 8.832480
+batch: 10000, _loss: 8.020216
+batch: 10200, _loss: 8.725007
+batch: 10400, _loss: 8.628551
+batch: 10600, _loss: 8.303589
+batch: 10800, _loss: 9.035910
+batch: 11000, _loss: 8.245013
+batch: 11200, _loss: 8.420896
+batch: 11400, _loss: 7.881353
+batch: 11600, _loss: 8.585324
+batch: 11800, _loss: 8.410240
+batch: 12000, _loss: 8.380690
+batch: 12200, _loss: 8.380528
+batch: 12400, _loss: 8.044837
+batch: 12600, _loss: 8.758472
+batch: 12800, _loss: 8.075013
+batch: 13000, _loss: 8.453320
+batch: 13200, _loss: 8.666453
+batch: 13400, _loss: 8.428702
+batch: 13600, _loss: 8.330535
+batch: 13800, _loss: 8.697577
+batch: 14000, _loss: 8.447204
+batch: 14200, _loss: 8.532103
+batch: 14400, _loss: 8.747993
+train 0, loss: 2.093879
+consistency score: 0.03427981514002605
+test aver acc: {0: tensor(0.6158), 1: tensor(0.4184), 2: tensor(0.3626), 3: tensor(0.2707), 4: tensor(0.2321)}
+eval avg class IoU: 0.3148515140965254
+0.18905076414912775
+0.11616027351684606
+0.0694442439066077
+0.03534989938764104
+___________________epoch 1_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+batch: 200, _loss: 9.184523
+batch: 400, _loss: 9.171314
+batch: 600, _loss: 9.161583
+batch: 800, _loss: 9.165022
+batch: 1000, _loss: 9.173937
+batch: 1200, _loss: 9.184090
+batch: 1400, _loss: 9.172166
+batch: 1600, _loss: 9.170938
+batch: 1800, _loss: 9.204582
+batch: 2000, _loss: 9.177476
+batch: 2200, _loss: 9.196135
+batch: 2400, _loss: 9.191785
+batch: 2600, _loss: 9.181315
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+batch: 200, _loss: 8.402784
+batch: 400, _loss: 8.425092
+batch: 600, _loss: 8.623618
+batch: 800, _loss: 8.127544
+batch: 1000, _loss: 8.434652
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________
+batch: 200, _loss: 8.463329
+batch: 400, _loss: 8.439095
+batch: 600, _loss: 8.664973
+batch: 800, _loss: 8.169586
+batch: 1000, _loss: 8.430035
+Using GPU : 0 from 1 devices
+length of train loader: 7293
+___________________epoch 0_____________________

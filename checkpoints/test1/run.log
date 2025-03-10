@@ -1,0 +1,676 @@
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+batch: 500, _loss: 6.536585
+batch: 1000, _loss: 4.850732
+batch: 1500, _loss: 5.116251
+train 0, loss: 0.174951
+consistency score: 0.9492287251486707
+test aver acc: {0: tensor(0.7111), 1: tensor(0.6387), 2: tensor(0.6147), 3: tensor(0.6021), 4: tensor(0.4609)}
+eval avg class IoU: 0.528591624629942
+0.455574405766707
+0.25882324729784634
+0.1577425414842773
+0.08969846114584784
+___________________epoch 1_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 1824
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 10.587778
+batch: 200, _tea_loss: 7.162099
+batch: 400, _loss: 12.860117
+batch: 400, _tea_loss: 9.729851
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 12.080407
+batch: 200, _tea_loss: 8.616123
+batch: 400, _loss: 13.452725
+batch: 400, _tea_loss: 10.464523
+batch: 600, _loss: 10.507663
+batch: 600, _tea_loss: 7.350982
+batch: 800, _loss: 12.294818
+batch: 800, _tea_loss: 9.350282
+batch: 1000, _loss: 13.574261
+batch: 1000, _tea_loss: 10.492568
+batch: 1200, _loss: 11.180025
+batch: 1200, _tea_loss: 8.054691
+batch: 1400, _loss: 11.673265
+batch: 1400, _tea_loss: 8.544899
+batch: 1600, _loss: 14.016934
+batch: 1600, _tea_loss: 11.058791
+batch: 1800, _loss: 11.748953
+batch: 1800, _tea_loss: 8.814997
+batch: 2000, _loss: 11.120985
+batch: 2000, _tea_loss: 8.265587
+batch: 2200, _loss: 10.541841
+batch: 2200, _tea_loss: 7.572137
+batch: 2400, _loss: 13.634828
+batch: 2400, _tea_loss: 10.594377
+batch: 2600, _loss: 11.323103
+batch: 2600, _tea_loss: 8.465832
+batch: 2800, _loss: 11.535559
+batch: 2800, _tea_loss: 8.568827
+batch: 3000, _loss: 12.460224
+batch: 3000, _tea_loss: 9.443676
+batch: 3200, _loss: 14.391301
+batch: 3200, _tea_loss: 11.444071
+batch: 3400, _loss: 12.687327
+batch: 3400, _tea_loss: 9.707762
+batch: 3600, _loss: 10.617644
+batch: 3600, _tea_loss: 7.548963
+train 0, loss: 0.756426
+consistency score: 0.9981446131153362
+test aver acc: {0: tensor(0.7430), 1: tensor(0.1301), 2: tensor(0.0932), 3: tensor(0.0899), 4: tensor(0.0899)}
+eval avg class IoU: 0.37147935847411745
+0.04336384120889997
+0.018738968481199565
+0.01124146371946605
+0.00817560997779349
+___________________epoch 1_____________________
+batch: 200, _loss: 12.020465
+batch: 200, _tea_loss: 9.070187
+batch: 400, _loss: 12.744441
+batch: 400, _tea_loss: 9.741976
+batch: 600, _loss: 11.357777
+batch: 600, _tea_loss: 8.436653
+batch: 800, _loss: 13.743909
+batch: 800, _tea_loss: 10.627857
+batch: 1000, _loss: 10.451903
+batch: 1000, _tea_loss: 7.587399
+batch: 1200, _loss: 13.222438
+batch: 1200, _tea_loss: 10.368837
+batch: 1400, _loss: 11.051151
+batch: 1400, _tea_loss: 8.105450
+batch: 1600, _loss: 13.291939
+batch: 1600, _tea_loss: 10.299538
+batch: 1800, _loss: 12.576402
+batch: 1800, _tea_loss: 9.595461
+batch: 2000, _loss: 11.593860
+batch: 2000, _tea_loss: 8.444443
+batch: 2200, _loss: 10.167778
+batch: 2200, _tea_loss: 6.989824
+batch: 2400, _loss: 10.441926
+batch: 2400, _tea_loss: 7.444672
+batch: 2600, _loss: 10.074120
+batch: 2600, _tea_loss: 7.271389
+batch: 2800, _loss: 9.799420
+batch: 2800, _tea_loss: 6.844559
+batch: 3000, _loss: 10.375306
+batch: 3000, _tea_loss: 7.592865
+batch: 3200, _loss: 13.869589
+batch: 3200, _tea_loss: 7.207113
+batch: 3400, _loss: 9.502294
+batch: 3400, _tea_loss: 6.100964
+batch: 3600, _loss: 9.704011
+batch: 3600, _tea_loss: 6.686103
+train 1, loss: 0.706981
+___________________epoch 2_____________________
+batch: 200, _loss: 9.219327
+batch: 200, _tea_loss: 5.977655
+batch: 400, _loss: 12.114552
+batch: 400, _tea_loss: 8.838223
+batch: 600, _loss: 10.742361
+batch: 600, _tea_loss: 7.657733
+batch: 800, _loss: 9.356629
+batch: 800, _tea_loss: 6.049000
+batch: 1000, _loss: 12.477284
+batch: 1000, _tea_loss: 7.766853
+batch: 1200, _loss: 12.935685
+batch: 1200, _tea_loss: 7.261877
+batch: 1400, _loss: 8.897223
+batch: 1400, _tea_loss: 5.460616
+batch: 1600, _loss: 10.086259
+batch: 1600, _tea_loss: 6.451420
+batch: 1800, _loss: 7.583325
+batch: 1800, _tea_loss: 4.845585
+batch: 2000, _loss: 8.265016
+batch: 2000, _tea_loss: 5.011901
+batch: 2200, _loss: 10.428988
+batch: 2200, _tea_loss: 7.094798
+batch: 2400, _loss: 11.035018
+batch: 2400, _tea_loss: 8.007212
+batch: 2600, _loss: 10.058916
+batch: 2600, _tea_loss: 7.326590
+batch: 2800, _loss: 9.583911
+batch: 2800, _tea_loss: 6.974892
+batch: 3000, _loss: 10.989986
+batch: 3000, _tea_loss: 5.715428
+batch: 3200, _loss: 9.333490
+batch: 3200, _tea_loss: 6.640400
+batch: 3400, _loss: 7.640767
+batch: 3400, _tea_loss: 5.075606
+batch: 3600, _loss: 8.662807
+batch: 3600, _tea_loss: 5.642589
+train 2, loss: 0.608812
+___________________epoch 3_____________________
+batch: 200, _loss: 8.097753
+batch: 200, _tea_loss: 5.253754
+batch: 400, _loss: 9.869707
+batch: 400, _tea_loss: 6.718077
+batch: 600, _loss: 7.544339
+batch: 600, _tea_loss: 5.123937
+batch: 800, _loss: 8.580231
+batch: 800, _tea_loss: 5.781200
+batch: 1000, _loss: 8.111361
+batch: 1000, _tea_loss: 5.194929
+batch: 1200, _loss: 11.269743
+batch: 1200, _tea_loss: 7.232700
+batch: 1400, _loss: 10.016210
+batch: 1400, _tea_loss: 6.552304
+batch: 1600, _loss: 6.649663
+batch: 1600, _tea_loss: 4.088477
+batch: 1800, _loss: 11.559471
+batch: 1800, _tea_loss: 7.724174
+batch: 2000, _loss: 8.709203
+batch: 2000, _tea_loss: 5.736093
+batch: 2200, _loss: 8.003306
+batch: 2200, _tea_loss: 4.845482
+batch: 2400, _loss: 9.331648
+batch: 2400, _tea_loss: 6.386946
+batch: 2600, _loss: 9.402764
+batch: 2600, _tea_loss: 6.131716
+batch: 2800, _loss: 12.731663
+batch: 2800, _tea_loss: 9.085725
+batch: 3000, _loss: 6.323736
+batch: 3000, _tea_loss: 3.913907
+batch: 3200, _loss: 8.459839
+batch: 3200, _tea_loss: 5.503622
+batch: 3400, _loss: 8.907461
+batch: 3400, _tea_loss: 6.056149
+batch: 3600, _loss: 12.229031
+batch: 3600, _tea_loss: 7.913541
+train 3, loss: 0.580065
+consistency score: 0.989310934007079
+test aver acc: {0: tensor(0.9250), 1: tensor(0.3263), 2: tensor(0.2956), 3: tensor(0.2874), 4: tensor(0.2056)}
+eval avg class IoU: 0.8219351466310081
+0.2952775996486373
+0.16953509516535054
+0.10391006470530957
+0.06767164635995378
+___________________epoch 4_____________________
+batch: 200, _loss: 9.985566
+batch: 200, _tea_loss: 6.686804
+batch: 400, _loss: 9.298934
+batch: 400, _tea_loss: 6.420200
+batch: 600, _loss: 10.170507
+batch: 600, _tea_loss: 6.003747
+batch: 800, _loss: 9.766986
+batch: 800, _tea_loss: 6.471876
+batch: 1000, _loss: 11.491615
+batch: 1000, _tea_loss: 8.623363
+batch: 1200, _loss: 8.974106
+batch: 1200, _tea_loss: 6.190883
+batch: 1400, _loss: 9.739926
+batch: 1400, _tea_loss: 6.048272
+batch: 1600, _loss: 9.202572
+batch: 1600, _tea_loss: 6.417446
+batch: 1800, _loss: 9.834389
+batch: 1800, _tea_loss: 6.684480
+batch: 2000, _loss: 8.799797
+batch: 2000, _tea_loss: 5.666224
+batch: 2200, _loss: 9.860705
+batch: 2200, _tea_loss: 6.083369
+batch: 2400, _loss: 7.943330
+batch: 2400, _tea_loss: 5.381312
+batch: 2600, _loss: 8.282835
+batch: 2600, _tea_loss: 5.709843
+batch: 2800, _loss: 9.152783
+batch: 2800, _tea_loss: 6.617815
+batch: 3000, _loss: 8.227445
+batch: 3000, _tea_loss: 5.605479
+batch: 3200, _loss: 10.122507
+batch: 3200, _tea_loss: 7.542706
+batch: 3400, _loss: 8.936397
+batch: 3400, _tea_loss: 6.348183
+batch: 3600, _loss: 10.388557
+batch: 3600, _tea_loss: 7.484095
+train 4, loss: 0.569851
+___________________epoch 5_____________________
+batch: 200, _loss: 7.894061
+batch: 200, _tea_loss: 5.102473
+batch: 400, _loss: 8.474266
+batch: 400, _tea_loss: 5.942924
+batch: 600, _loss: 9.283808
+batch: 600, _tea_loss: 6.250351
+batch: 800, _loss: 8.125967
+batch: 800, _tea_loss: 5.791230
+batch: 1000, _loss: 9.542823
+batch: 1000, _tea_loss: 5.736938
+batch: 1200, _loss: 8.635063
+batch: 1200, _tea_loss: 6.104472
+batch: 1400, _loss: 10.490482
+batch: 1400, _tea_loss: 7.756999
+batch: 1600, _loss: 9.838741
+batch: 1600, _tea_loss: 6.574536
+batch: 1800, _loss: 7.876614
+batch: 1800, _tea_loss: 5.106021
+batch: 2000, _loss: 7.867815
+batch: 2000, _tea_loss: 5.050138
+batch: 2200, _loss: 7.451810
+batch: 2200, _tea_loss: 4.978807
+batch: 2400, _loss: 11.157323
+batch: 2400, _tea_loss: 8.363999
+batch: 2600, _loss: 8.043425
+batch: 2600, _tea_loss: 5.223074
+batch: 2800, _loss: 7.209500
+batch: 2800, _tea_loss: 4.763459
+batch: 3000, _loss: 8.758704
+batch: 3000, _tea_loss: 5.524725
+batch: 3200, _loss: 7.458295
+batch: 3200, _tea_loss: 5.067217
+batch: 3400, _loss: 8.612314
+batch: 3400, _tea_loss: 5.730674
+batch: 3600, _loss: 8.968359
+batch: 3600, _tea_loss: 6.265198
+train 5, loss: 0.564247
+___________________epoch 6_____________________
+batch: 200, _loss: 8.501057
+batch: 200, _tea_loss: 5.952475
+batch: 400, _loss: 8.193068
+batch: 400, _tea_loss: 5.395084
+batch: 600, _loss: 7.202578
+batch: 600, _tea_loss: 4.749407
+batch: 800, _loss: 9.933840
+batch: 800, _tea_loss: 7.099057
+batch: 1000, _loss: 8.170449
+batch: 1000, _tea_loss: 5.835935
+batch: 1200, _loss: 7.692288
+batch: 1200, _tea_loss: 4.868283
+batch: 1400, _loss: 8.033641
+batch: 1400, _tea_loss: 5.480897
+batch: 1600, _loss: 8.501073
+batch: 1600, _tea_loss: 6.032392
+batch: 1800, _loss: 7.881562
+batch: 1800, _tea_loss: 5.396428
+batch: 2000, _loss: 9.729075
+batch: 2000, _tea_loss: 5.887239
+batch: 2200, _loss: 10.325404
+batch: 2200, _tea_loss: 6.648213
+batch: 2400, _loss: 9.480150
+batch: 2400, _tea_loss: 7.052029
+batch: 2600, _loss: 8.601801
+batch: 2600, _tea_loss: 5.776029
+batch: 2800, _loss: 12.855969
+batch: 2800, _tea_loss: 7.643754
+batch: 3000, _loss: 9.822032
+batch: 3000, _tea_loss: 7.037951
+batch: 3200, _loss: 8.858258
+batch: 3200, _tea_loss: 5.837383
+batch: 3400, _loss: 7.592854
+batch: 3400, _tea_loss: 4.663566
+batch: 3600, _loss: 8.371000
+batch: 3600, _tea_loss: 5.593871
+train 6, loss: 0.573113
+consistency score: 0.9886787971689875
+test aver acc: {0: tensor(0.8877), 1: tensor(0.3314), 2: tensor(0.3007), 3: tensor(0.2933), 4: tensor(0.2073)}
+eval avg class IoU: 0.7574621370532753
+0.26851399665267417
+0.1548663143951986
+0.0950333087862118
+0.06478076895383603
+___________________epoch 7_____________________
+batch: 200, _loss: 8.277921
+batch: 200, _tea_loss: 5.060282
+batch: 400, _loss: 10.455585
+batch: 400, _tea_loss: 6.863750
+batch: 600, _loss: 8.112076
+batch: 600, _tea_loss: 5.232592
+batch: 800, _loss: 9.927414
+batch: 800, _tea_loss: 7.121599
+batch: 1000, _loss: 7.871728
+batch: 1000, _tea_loss: 5.089290
+batch: 1200, _loss: 8.089988
+batch: 1200, _tea_loss: 5.424212
+batch: 1400, _loss: 8.649453
+batch: 1400, _tea_loss: 4.710469
+batch: 1600, _loss: 9.050674
+batch: 1600, _tea_loss: 6.164747
+batch: 1800, _loss: 8.494041
+batch: 1800, _tea_loss: 5.338613
+batch: 2000, _loss: 8.801236
+batch: 2000, _tea_loss: 5.565002
+batch: 2200, _loss: 9.033142
+batch: 2200, _tea_loss: 5.974174
+batch: 2400, _loss: 8.697042
+batch: 2400, _tea_loss: 6.061053
+batch: 2600, _loss: 7.389728
+batch: 2600, _tea_loss: 4.890183
+batch: 2800, _loss: 8.159942
+batch: 2800, _tea_loss: 5.560956
+batch: 3000, _loss: 8.639895
+batch: 3000, _tea_loss: 5.784556
+batch: 3200, _loss: 10.003114
+batch: 3200, _tea_loss: 6.990467
+batch: 3400, _loss: 9.490022
+batch: 3400, _tea_loss: 6.800365
+batch: 3600, _loss: 9.602589
+batch: 3600, _tea_loss: 6.348815
+train 7, loss: 0.570452
+___________________epoch 8_____________________
+batch: 200, _loss: 10.008422
+batch: 200, _tea_loss: 7.062372
+batch: 400, _loss: 8.827109
+batch: 400, _tea_loss: 6.131684
+batch: 600, _loss: 9.865560
+batch: 600, _tea_loss: 7.563654
+batch: 800, _loss: 8.270615
+batch: 800, _tea_loss: 5.555344
+batch: 1000, _loss: 8.739030
+batch: 1000, _tea_loss: 6.298485
+batch: 1200, _loss: 10.585251
+batch: 1200, _tea_loss: 6.850717
+batch: 1400, _loss: 8.137924
+batch: 1400, _tea_loss: 5.642790
+batch: 1600, _loss: 10.123741
+batch: 1600, _tea_loss: 7.504179
+batch: 1800, _loss: 8.736680
+batch: 1800, _tea_loss: 6.039199
+batch: 2000, _loss: 10.071053
+batch: 2000, _tea_loss: 7.286649
+batch: 2200, _loss: 7.460037
+batch: 2200, _tea_loss: 5.057907
+batch: 2400, _loss: 8.325076
+batch: 2400, _tea_loss: 5.579356
+batch: 2600, _loss: 7.844779
+batch: 2600, _tea_loss: 5.380171
+batch: 2800, _loss: 11.823957
+batch: 2800, _tea_loss: 9.200514
+batch: 3000, _loss: 11.730432
+batch: 3000, _tea_loss: 8.503954
+batch: 3200, _loss: 12.758982
+batch: 3200, _tea_loss: 9.687107
+batch: 3400, _loss: 10.469503
+batch: 3400, _tea_loss: 7.589627
+batch: 3600, _loss: 10.398445
+batch: 3600, _tea_loss: 7.283177
+train 8, loss: 0.588367
+___________________epoch 9_____________________
+batch: 200, _loss: 9.120182
+batch: 200, _tea_loss: 6.659834
+batch: 400, _loss: 10.852657
+batch: 400, _tea_loss: 7.423640
+batch: 600, _loss: 8.891826
+batch: 600, _tea_loss: 5.450866
+batch: 800, _loss: 7.732602
+batch: 800, _tea_loss: 4.450358
+batch: 1000, _loss: 10.689622
+batch: 1000, _tea_loss: 5.690945
+batch: 1200, _loss: 10.668653
+batch: 1200, _tea_loss: 7.865158
+batch: 1400, _loss: 9.508856
+batch: 1400, _tea_loss: 6.164994
+batch: 1600, _loss: 7.989888
+batch: 1600, _tea_loss: 5.294913
+batch: 1800, _loss: 8.266681
+batch: 1800, _tea_loss: 6.037002
+batch: 2000, _loss: 7.986054
+batch: 2000, _tea_loss: 4.960065
+batch: 2200, _loss: 10.321652
+batch: 2200, _tea_loss: 6.495925
+batch: 2400, _loss: 8.764810
+batch: 2400, _tea_loss: 5.682879
+batch: 2600, _loss: 12.120047
+batch: 2600, _tea_loss: 8.234937
+batch: 2800, _loss: 7.118951
+batch: 2800, _tea_loss: 3.957788
+batch: 3000, _loss: 8.983002
+batch: 3000, _tea_loss: 6.044181
+batch: 3200, _loss: 9.066057
+batch: 3200, _tea_loss: 5.947729
+batch: 3400, _loss: 8.464775
+batch: 3400, _tea_loss: 5.211799
+batch: 3600, _loss: 7.418165
+batch: 3600, _tea_loss: 4.901737
+train 9, loss: 0.571711
+consistency score: 0.9860567414103251
+test aver acc: {0: tensor(0.8709), 1: tensor(0.3365), 2: tensor(0.3085), 3: tensor(0.3014), 4: tensor(0.2249)}
+eval avg class IoU: 0.735317918583278
+0.26577125189309725
+0.15296909020794605
+0.09321946660650178
+0.06912612872463018
+___________________epoch 10_____________________
+batch: 200, _loss: 7.495535
+batch: 200, _tea_loss: 5.046895
+batch: 400, _loss: 8.684319
+batch: 400, _tea_loss: 6.311250
+batch: 600, _loss: 8.266719
+batch: 600, _tea_loss: 5.495271
+batch: 800, _loss: 11.056812
+batch: 800, _tea_loss: 7.830814
+batch: 1000, _loss: 9.045437
+batch: 1000, _tea_loss: 6.226756
+batch: 1200, _loss: 7.899953
+batch: 1200, _tea_loss: 5.378886
+batch: 1400, _loss: 8.204347
+batch: 1400, _tea_loss: 5.639886
+batch: 1600, _loss: 7.820288
+batch: 1600, _tea_loss: 5.120616
+batch: 1800, _loss: 8.552995
+batch: 1800, _tea_loss: 5.268145
+batch: 2000, _loss: 11.390593
+batch: 2000, _tea_loss: 6.611659
+batch: 2200, _loss: 7.375305
+batch: 2200, _tea_loss: 4.994824
+batch: 2400, _loss: 7.587754
+batch: 2400, _tea_loss: 5.138827
+batch: 2600, _loss: 8.572543
+batch: 2600, _tea_loss: 5.500763
+batch: 2800, _loss: 10.042942
+batch: 2800, _tea_loss: 6.357231
+batch: 3000, _loss: 8.817994
+batch: 3000, _tea_loss: 6.001999
+batch: 3200, _loss: 10.464455
+batch: 3200, _tea_loss: 7.680256
+batch: 3400, _loss: 7.742204
+batch: 3400, _tea_loss: 4.993958
+batch: 3600, _loss: 8.942112
+batch: 3600, _tea_loss: 6.003852
+train 10, loss: 0.553109
+___________________epoch 11_____________________
+batch: 200, _loss: 9.149173
+batch: 200, _tea_loss: 6.349159
+batch: 400, _loss: 7.371141
+batch: 400, _tea_loss: 5.161018
+batch: 600, _loss: 7.268724
+batch: 600, _tea_loss: 4.679218
+batch: 800, _loss: 11.066769
+batch: 800, _tea_loss: 7.293154
+batch: 1000, _loss: 9.706820
+batch: 1000, _tea_loss: 6.813784
+batch: 1200, _loss: 9.751219
+batch: 1200, _tea_loss: 6.735866
+batch: 1400, _loss: 7.921088
+batch: 1400, _tea_loss: 5.010715
+batch: 1600, _loss: 6.456922
+batch: 1600, _tea_loss: 3.656272
+batch: 1800, _loss: 7.389208
+batch: 1800, _tea_loss: 4.496936
+batch: 2000, _loss: 10.410383
+batch: 2000, _tea_loss: 7.697528
+batch: 2200, _loss: 9.278595
+batch: 2200, _tea_loss: 6.933971
+batch: 2400, _loss: 9.353513
+batch: 2400, _tea_loss: 5.880903
+batch: 2600, _loss: 9.411079
+batch: 2600, _tea_loss: 6.841941
+batch: 2800, _loss: 9.642571
+batch: 2800, _tea_loss: 6.248085
+batch: 3000, _loss: 8.184660
+batch: 3000, _tea_loss: 5.492781
+batch: 3200, _loss: 7.926038
+batch: 3200, _tea_loss: 4.861078
+batch: 3400, _loss: 11.239112
+batch: 3400, _tea_loss: 8.098595
+batch: 3600, _loss: 12.639901
+batch: 3600, _tea_loss: 9.542467
+train 11, loss: 0.574297
+___________________epoch 12_____________________
+batch: 200, _loss: 13.667063
+batch: 200, _tea_loss: 10.673586
+batch: 400, _loss: 11.590423
+batch: 400, _tea_loss: 8.611948
+batch: 600, _loss: 11.791758
+batch: 600, _tea_loss: 8.915842
+batch: 800, _loss: 10.177881
+batch: 800, _tea_loss: 7.415858
+batch: 1000, _loss: 9.584259
+batch: 1000, _tea_loss: 6.925416
+batch: 1200, _loss: 8.873733
+batch: 1200, _tea_loss: 6.719499
+batch: 1400, _loss: 9.815523
+batch: 1400, _tea_loss: 6.272365
+batch: 1600, _loss: 10.369967
+batch: 1600, _tea_loss: 6.789217
+batch: 1800, _loss: 10.631074
+batch: 1800, _tea_loss: 7.392440
+batch: 2000, _loss: 10.577279
+batch: 2000, _tea_loss: 7.441986
+batch: 2200, _loss: 11.523265
+batch: 2200, _tea_loss: 7.971314
+batch: 2400, _loss: 11.444765
+batch: 2400, _tea_loss: 7.645622
+batch: 2600, _loss: 9.984284
+batch: 2600, _tea_loss: 7.227981
+batch: 2800, _loss: 10.514912
+batch: 2800, _tea_loss: 7.227542
+batch: 3000, _loss: 9.660433
+batch: 3000, _tea_loss: 6.216195
+batch: 3200, _loss: 8.835547
+batch: 3200, _tea_loss: 6.041735
+batch: 3400, _loss: 11.926287
+batch: 3400, _tea_loss: 8.833030
+batch: 3600, _loss: 9.525762
+batch: 3600, _tea_loss: 6.389398
+train 12, loss: 0.650560
+consistency score: 0.9891457934315621
+test aver acc: {0: tensor(0.6050), 1: tensor(0.3317), 2: tensor(0.3057), 3: tensor(0.2982), 4: tensor(0.2142)}
+eval avg class IoU: 0.4272119087971419
+0.20138670745279239
+0.110035807198098
+0.06716996626349064
+0.05062938828370287
+___________________epoch 13_____________________
+batch: 200, _loss: 10.191812
+batch: 200, _tea_loss: 6.986200
+batch: 400, _loss: 11.612473
+batch: 400, _tea_loss: 8.768315
+batch: 600, _loss: 9.349037
+batch: 600, _tea_loss: 6.403472
+batch: 800, _loss: 11.865805
+batch: 800, _tea_loss: 7.972488
+batch: 1000, _loss: 9.309435
+batch: 1000, _tea_loss: 6.038628
+batch: 1200, _loss: 8.430186
+batch: 1200, _tea_loss: 5.535909
+batch: 1400, _loss: 11.320886
+batch: 1400, _tea_loss: 7.654989
+batch: 1600, _loss: 7.619352
+batch: 1600, _tea_loss: 4.782753
+batch: 1800, _loss: 10.094949
+batch: 1800, _tea_loss: 7.024169
+batch: 2000, _loss: 10.170424
+batch: 2000, _tea_loss: 7.216736
+batch: 2200, _loss: 9.544735
+batch: 2200, _tea_loss: 6.398128
+batch: 2400, _loss: 8.246117
+batch: 2400, _tea_loss: 5.204457
+batch: 2600, _loss: 11.733775
+batch: 2600, _tea_loss: 8.498307
+batch: 2800, _loss: 10.152596
+batch: 2800, _tea_loss: 6.992118
+batch: 3000, _loss: 10.516001
+batch: 3000, _tea_loss: 6.846331
+batch: 3200, _loss: 9.199632
+batch: 3200, _tea_loss: 5.159527
+batch: 3400, _loss: 8.296152
+batch: 3400, _tea_loss: 5.024488
+batch: 3600, _loss: 8.608824
+batch: 3600, _tea_loss: 5.863550
+train 13, loss: 0.611342
+___________________epoch 14_____________________
+batch: 200, _loss: 8.749522
+batch: 200, _tea_loss: 5.824059
+batch: 400, _loss: 11.190744
+batch: 400, _tea_loss: 8.045259
+batch: 600, _loss: 10.509106
+batch: 600, _tea_loss: 7.542998
+batch: 800, _loss: 9.733560
+batch: 800, _tea_loss: 6.803208
+batch: 1000, _loss: 11.364573
+batch: 1000, _tea_loss: 8.196312
+batch: 1200, _loss: 9.717926
+batch: 1200, _tea_loss: 6.414243
+batch: 1400, _loss: 8.925962
+batch: 1400, _tea_loss: 6.078460
+batch: 1600, _loss: 9.077142
+batch: 1600, _tea_loss: 6.080373
+batch: 1800, _loss: 9.279345
+batch: 1800, _tea_loss: 6.269972
+batch: 2000, _loss: 8.957676
+batch: 2000, _tea_loss: 5.525529
+batch: 2200, _loss: 7.894082
+batch: 2200, _tea_loss: 5.074525
+batch: 2400, _loss: 10.881698
+batch: 2400, _tea_loss: 7.670120
+batch: 2600, _loss: 11.192178
+batch: 2600, _tea_loss: 8.032913
+batch: 2800, _loss: 11.401386
+batch: 2800, _tea_loss: 8.586234
+batch: 3000, _loss: 6.190956
+batch: 3000, _tea_loss: 3.687412
+batch: 3200, _loss: 8.296550
+batch: 3200, _tea_loss: 5.239312
+batch: 3400, _loss: 10.532318
+batch: 3400, _tea_loss: 7.143182
+batch: 3600, _loss: 8.696288
+batch: 3600, _tea_loss: 5.621259
+train 14, loss: 0.604810
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________

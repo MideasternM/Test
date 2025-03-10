@@ -1,0 +1,71 @@
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 13.843571
+batch: 400, _loss: 13.920960
+batch: 600, _loss: 13.323495
+batch: 800, _loss: 13.515216
+batch: 1000, _loss: 12.997898
+batch: 1200, _loss: 13.288088
+batch: 1400, _loss: 13.240912
+batch: 1600, _loss: 13.061466
+batch: 1800, _loss: 13.058564
+batch: 2000, _loss: 13.626797
+batch: 2200, _loss: 13.420580
+batch: 2400, _loss: 13.449437
+batch: 2600, _loss: 13.481439
+batch: 2800, _loss: 13.577322
+batch: 3000, _loss: 13.749155
+batch: 3200, _loss: 13.768431
+batch: 3400, _loss: 14.048732
+batch: 3600, _loss: 13.272605
+train 0, loss: 0.844679
+consistency score: 0.002888618389646982
+test aver acc: {0: tensor(0.3239), 1: tensor(0.2527), 2: tensor(0.1711), 3: tensor(0.1038), 4: tensor(0.0752)}
+eval avg class IoU: 0.1539480789382337
+0.11401525200250807
+0.06088794364014365
+0.030230773325367746
+0.015769254645222643
+___________________epoch 1_____________________

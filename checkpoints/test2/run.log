@@ -1,0 +1,1121 @@
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 9.068426
+batch: 400, _loss: 9.531665
+batch: 600, _loss: 9.036039
+batch: 800, _loss: 8.547444
+batch: 1000, _loss: 9.193755
+batch: 1200, _loss: 7.901032
+batch: 1400, _loss: 6.896583
+batch: 1600, _loss: 12.182531
+batch: 1800, _loss: 9.023029
+batch: 2000, _loss: 8.197515
+batch: 2200, _loss: 8.386747
+batch: 2400, _loss: 8.824965
+batch: 2600, _loss: 6.799634
+batch: 2800, _loss: 7.957913
+batch: 3000, _loss: 7.822967
+batch: 3200, _loss: 7.267689
+batch: 3400, _loss: 7.786182
+batch: 3600, _loss: 7.298176
+train 0, loss: 0.515516
+consistency score: 0.922659542805747
+test aver acc: {0: tensor(0.8821), 1: tensor(0.3856), 2: tensor(0.3487), 3: tensor(0.3216), 4: tensor(0.2550)}
+eval avg class IoU: 0.7141057589938116
+0.3037634394937762
+0.22262644001192539
+0.12719553225366814
+0.08065281166802964
+___________________epoch 1_____________________
+batch: 200, _loss: 7.791377
+batch: 400, _loss: 8.807420
+batch: 600, _loss: 8.829723
+batch: 800, _loss: 6.641577
+batch: 1000, _loss: 4.961854
+batch: 1200, _loss: 4.667803
+batch: 1400, _loss: 3.090588
+batch: 1600, _loss: 5.304043
+batch: 1800, _loss: 3.655280
+batch: 2000, _loss: 4.396338
+batch: 2200, _loss: 3.478866
+batch: 2400, _loss: 3.508246
+batch: 2600, _loss: 3.507443
+batch: 2800, _loss: 3.766853
+batch: 3000, _loss: 3.160078
+batch: 3200, _loss: 4.694810
+batch: 3400, _loss: 3.567612
+batch: 3600, _loss: 3.158262
+train 1, loss: 0.322490
+___________________epoch 2_____________________
+batch: 200, _loss: 4.134159
+batch: 400, _loss: 9.004473
+batch: 600, _loss: 7.623073
+batch: 800, _loss: 5.487526
+batch: 1000, _loss: 3.978769
+batch: 1200, _loss: 4.614243
+batch: 1400, _loss: 3.372079
+batch: 1600, _loss: 6.405153
+batch: 1800, _loss: 2.263046
+batch: 2000, _loss: 2.848032
+batch: 2200, _loss: 3.675681
+batch: 2400, _loss: 5.178794
+batch: 2600, _loss: 4.696864
+batch: 2800, _loss: 4.182250
+batch: 3000, _loss: 3.880092
+batch: 3200, _loss: 3.934541
+batch: 3400, _loss: 4.533048
+batch: 3600, _loss: 4.149658
+train 2, loss: 0.265072
+___________________epoch 3_____________________
+batch: 200, _loss: 3.797895
+batch: 400, _loss: 4.150373
+batch: 600, _loss: 2.876159
+batch: 800, _loss: 2.648233
+batch: 1000, _loss: 3.720992
+batch: 1200, _loss: 2.775834
+batch: 1400, _loss: 3.186751
+batch: 1600, _loss: 3.501581
+batch: 1800, _loss: 3.320728
+batch: 2000, _loss: 3.480670
+batch: 2200, _loss: 4.217633
+batch: 2400, _loss: 3.936620
+batch: 2600, _loss: 4.119076
+batch: 2800, _loss: 5.612070
+batch: 3000, _loss: 2.356139
+batch: 3200, _loss: 2.916537
+batch: 3400, _loss: 4.731372
+batch: 3600, _loss: 7.157131
+train 3, loss: 0.254572
+consistency score: 0.985446753693764
+test aver acc: {0: tensor(0.9100), 1: tensor(0.8750), 2: tensor(0.8537), 3: tensor(0.8484), 4: tensor(0.7800)}
+eval avg class IoU: 0.7809462654693242
+0.7023552299129076
+0.40697825689466216
+0.25162305490885
+0.17476489254087615
+___________________epoch 4_____________________
+batch: 200, _loss: 2.906295
+batch: 400, _loss: 4.048137
+batch: 600, _loss: 4.425016
+batch: 800, _loss: 3.327437
+batch: 1000, _loss: 6.037294
+batch: 1200, _loss: 3.131345
+batch: 1400, _loss: 3.672400
+batch: 1600, _loss: 2.979954
+batch: 1800, _loss: 3.311477
+batch: 2000, _loss: 2.714382
+batch: 2200, _loss: 2.585509
+batch: 2400, _loss: 3.120345
+batch: 2600, _loss: 2.555878
+batch: 2800, _loss: 5.350169
+batch: 3000, _loss: 3.581439
+batch: 3200, _loss: 5.431658
+batch: 3400, _loss: 3.758595
+batch: 3600, _loss: 4.486015
+train 4, loss: 0.249714
+___________________epoch 5_____________________
+batch: 200, _loss: 2.643270
+batch: 400, _loss: 4.584679
+batch: 600, _loss: 5.735317
+batch: 800, _loss: 4.026164
+batch: 1000, _loss: 4.760052
+batch: 1200, _loss: 4.234962
+batch: 1400, _loss: 4.462424
+batch: 1600, _loss: 5.771414
+batch: 1800, _loss: 3.497772
+batch: 2000, _loss: 5.203321
+batch: 2200, _loss: 2.856886
+batch: 2400, _loss: 5.722595
+batch: 2600, _loss: 2.571696
+batch: 2800, _loss: 3.342486
+batch: 3000, _loss: 3.873424
+batch: 3200, _loss: 3.615907
+batch: 3400, _loss: 2.738159
+batch: 3600, _loss: 4.097409
+train 5, loss: 0.250963
+___________________epoch 6_____________________
+batch: 200, _loss: 4.715257
+batch: 400, _loss: 3.754263
+batch: 600, _loss: 3.400381
+batch: 800, _loss: 3.026346
+batch: 1000, _loss: 4.045636
+batch: 1200, _loss: 3.386859
+batch: 1400, _loss: 2.567295
+batch: 1600, _loss: 3.689232
+batch: 1800, _loss: 4.039675
+batch: 2000, _loss: 2.928146
+batch: 2200, _loss: 5.421141
+batch: 2400, _loss: 4.738101
+batch: 2600, _loss: 3.748807
+batch: 2800, _loss: 5.481410
+batch: 3000, _loss: 4.432199
+batch: 3200, _loss: 4.371341
+batch: 3400, _loss: 3.405398
+batch: 3600, _loss: 3.868380
+train 6, loss: 0.252900
+consistency score: 0.9806685469011969
+test aver acc: {0: tensor(0.9173), 1: tensor(0.8572), 2: tensor(0.8379), 3: tensor(0.8248), 4: tensor(0.7527)}
+eval avg class IoU: 0.8110058950309139
+0.6904442779478887
+0.39989747825251687
+0.2442930281816807
+0.17494536074480546
+___________________epoch 7_____________________
+batch: 200, _loss: 3.543842
+batch: 400, _loss: 4.563080
+batch: 600, _loss: 2.431903
+batch: 800, _loss: 3.867944
+batch: 1000, _loss: 3.757578
+batch: 1200, _loss: 3.015573
+batch: 1400, _loss: 3.439146
+batch: 1600, _loss: 4.882378
+batch: 1800, _loss: 4.027736
+batch: 2000, _loss: 3.653699
+batch: 2200, _loss: 4.047737
+batch: 2400, _loss: 3.844113
+batch: 2600, _loss: 3.517928
+batch: 2800, _loss: 3.616211
+batch: 3000, _loss: 3.935365
+batch: 3200, _loss: 3.606542
+batch: 3400, _loss: 5.184916
+batch: 3600, _loss: 3.798707
+train 7, loss: 0.247925
+___________________epoch 8_____________________
+batch: 200, _loss: 4.885901
+batch: 400, _loss: 3.057935
+batch: 600, _loss: 5.526956
+batch: 800, _loss: 2.540649
+batch: 1000, _loss: 4.263731
+batch: 1200, _loss: 4.381135
+batch: 1400, _loss: 3.548304
+batch: 1600, _loss: 6.063979
+batch: 1800, _loss: 3.371613
+batch: 2000, _loss: 4.806280
+batch: 2200, _loss: 2.762661
+batch: 2400, _loss: 1.660335
+batch: 2600, _loss: 2.781163
+batch: 2800, _loss: 4.777979
+batch: 3000, _loss: 5.232333
+batch: 3200, _loss: 4.530189
+batch: 3400, _loss: 4.455644
+batch: 3600, _loss: 5.694719
+train 8, loss: 0.242537
+___________________epoch 9_____________________
+batch: 200, _loss: 3.345177
+batch: 400, _loss: 4.585233
+batch: 600, _loss: 3.802489
+batch: 800, _loss: 3.030164
+batch: 1000, _loss: 3.276323
+batch: 1200, _loss: 6.245591
+batch: 1400, _loss: 4.247572
+batch: 1600, _loss: 2.086795
+batch: 1800, _loss: 4.344798
+batch: 2000, _loss: 3.186928
+batch: 2200, _loss: 3.889655
+batch: 2400, _loss: 3.606274
+batch: 2600, _loss: 2.963633
+batch: 2800, _loss: 2.568088
+batch: 3000, _loss: 3.494719
+batch: 3200, _loss: 3.895026
+batch: 3400, _loss: 2.730585
+batch: 3600, _loss: 3.207927
+train 9, loss: 0.240524
+consistency score: 0.9874305781948585
+test aver acc: {0: tensor(0.9329), 1: tensor(0.8882), 2: tensor(0.8590), 3: tensor(0.8527), 4: tensor(0.7730)}
+eval avg class IoU: 0.838010752810006
+0.7338791498005081
+0.4176605050310723
+0.2582000800440455
+0.18276876840002132
+___________________epoch 10_____________________
+batch: 200, _loss: 2.830564
+batch: 400, _loss: 3.680906
+batch: 600, _loss: 3.960754
+batch: 800, _loss: 4.795758
+batch: 1000, _loss: 3.432953
+batch: 1200, _loss: 2.672767
+batch: 1400, _loss: 2.511957
+batch: 1600, _loss: 3.033387
+batch: 1800, _loss: 3.350251
+batch: 2000, _loss: 4.589184
+batch: 2200, _loss: 4.061402
+batch: 2400, _loss: 3.276117
+batch: 2600, _loss: 3.488464
+batch: 2800, _loss: 2.388697
+batch: 3000, _loss: 3.907150
+batch: 3200, _loss: 6.953804
+batch: 3400, _loss: 2.504364
+batch: 3600, _loss: 4.033242
+train 10, loss: 0.237877
+___________________epoch 11_____________________
+batch: 200, _loss: 3.182729
+batch: 400, _loss: 3.396636
+batch: 600, _loss: 2.737019
+batch: 800, _loss: 3.576808
+batch: 1000, _loss: 4.747981
+batch: 1200, _loss: 4.215580
+batch: 1400, _loss: 2.648897
+batch: 1600, _loss: 2.600750
+batch: 1800, _loss: 2.522498
+batch: 2000, _loss: 4.955180
+batch: 2200, _loss: 5.287169
+batch: 2400, _loss: 4.340818
+batch: 2600, _loss: 4.510912
+batch: 2800, _loss: 3.685765
+batch: 3000, _loss: 3.179921
+batch: 3200, _loss: 2.539886
+batch: 3400, _loss: 4.416176
+batch: 3600, _loss: 2.936734
+train 11, loss: 0.238577
+___________________epoch 12_____________________
+batch: 200, _loss: 5.092255
+batch: 400, _loss: 3.452508
+batch: 600, _loss: 3.693269
+batch: 800, _loss: 3.738560
+batch: 1000, _loss: 2.986029
+batch: 1200, _loss: 2.908844
+batch: 1400, _loss: 3.049529
+batch: 1600, _loss: 3.889288
+batch: 1800, _loss: 4.100028
+batch: 2000, _loss: 2.810587
+batch: 2200, _loss: 3.739213
+batch: 2400, _loss: 3.744231
+batch: 2600, _loss: 4.240098
+batch: 2800, _loss: 5.151218
+batch: 3000, _loss: 1.722419
+batch: 3200, _loss: 3.839912
+batch: 3400, _loss: 3.727995
+batch: 3600, _loss: 5.076096
+train 12, loss: 0.234296
+consistency score: 0.9848482271242781
+test aver acc: {0: tensor(0.9323), 1: tensor(0.9005), 2: tensor(0.8775), 3: tensor(0.8700), 4: tensor(0.7878)}
+eval avg class IoU: 0.8383968307609795
+0.7442806093593225
+0.4294065137958832
+0.2647143679731381
+0.18585810369145375
+___________________epoch 13_____________________
+batch: 200, _loss: 3.468818
+batch: 400, _loss: 6.761840
+batch: 600, _loss: 3.402678
+batch: 800, _loss: 2.503623
+batch: 1000, _loss: 3.211907
+batch: 1200, _loss: 3.011155
+batch: 1400, _loss: 6.494034
+batch: 1600, _loss: 3.158677
+batch: 1800, _loss: 2.451277
+batch: 2000, _loss: 3.161934
+batch: 2200, _loss: 2.954854
+batch: 2400, _loss: 2.194097
+batch: 2600, _loss: 5.009725
+batch: 2800, _loss: 5.176797
+batch: 3000, _loss: 3.476210
+batch: 3200, _loss: 2.265628
+batch: 3400, _loss: 2.414742
+batch: 3600, _loss: 3.781292
+train 13, loss: 0.235370
+___________________epoch 14_____________________
+batch: 200, _loss: 3.564052
+batch: 400, _loss: 4.325816
+batch: 600, _loss: 4.755158
+batch: 800, _loss: 3.155917
+batch: 1000, _loss: 5.028344
+batch: 1200, _loss: 3.365582
+batch: 1400, _loss: 3.078898
+batch: 1600, _loss: 5.095308
+batch: 1800, _loss: 3.556068
+batch: 2000, _loss: 2.393432
+batch: 2200, _loss: 3.027809
+batch: 2400, _loss: 4.376354
+batch: 2600, _loss: 3.912521
+batch: 2800, _loss: 4.499454
+batch: 3000, _loss: 2.415095
+batch: 3200, _loss: 3.510045
+batch: 3400, _loss: 1.887384
+batch: 3600, _loss: 2.967382
+train 14, loss: 0.232259
+___________________epoch 15_____________________
+batch: 200, _loss: 3.569866
+batch: 400, _loss: 2.519034
+batch: 600, _loss: 2.757184
+batch: 800, _loss: 3.251235
+batch: 1000, _loss: 3.402476
+batch: 1200, _loss: 5.042037
+batch: 1400, _loss: 4.005954
+batch: 1600, _loss: 2.586005
+batch: 1800, _loss: 3.272649
+batch: 2000, _loss: 3.548086
+batch: 2200, _loss: 4.285498
+batch: 2400, _loss: 3.073480
+batch: 2600, _loss: 5.243009
+batch: 2800, _loss: 1.734412
+batch: 3000, _loss: 5.808892
+batch: 3200, _loss: 2.949841
+batch: 3400, _loss: 3.240582
+batch: 3600, _loss: 4.751682
+train 15, loss: 0.234594
+consistency score: 0.9837419080663189
+test aver acc: {0: tensor(0.9344), 1: tensor(0.9032), 2: tensor(0.8819), 3: tensor(0.8736), 4: tensor(0.7899)}
+eval avg class IoU: 0.8432802910524615
+0.7478321386471877
+0.43434513129467084
+0.2671911208259055
+0.1865700306148771
+___________________epoch 16_____________________
+batch: 200, _loss: 3.123801
+batch: 400, _loss: 7.038687
+batch: 600, _loss: 3.526370
+batch: 800, _loss: 2.303043
+batch: 1000, _loss: 5.471590
+batch: 1200, _loss: 5.263876
+batch: 1400, _loss: 4.242692
+batch: 1600, _loss: 2.171570
+batch: 1800, _loss: 3.380391
+batch: 2000, _loss: 3.420141
+batch: 2200, _loss: 4.085531
+batch: 2400, _loss: 2.586113
+batch: 2600, _loss: 4.425169
+batch: 2800, _loss: 4.758565
+batch: 3000, _loss: 3.625005
+batch: 3200, _loss: 3.325782
+batch: 3400, _loss: 3.917583
+batch: 3600, _loss: 4.516059
+train 16, loss: 0.232501
+___________________epoch 17_____________________
+batch: 200, _loss: 3.503201
+batch: 400, _loss: 3.675831
+batch: 600, _loss: 3.489206
+batch: 800, _loss: 2.147871
+batch: 1000, _loss: 3.968798
+batch: 1200, _loss: 2.894919
+batch: 1400, _loss: 4.604886
+batch: 1600, _loss: 4.017967
+batch: 1800, _loss: 1.928491
+batch: 2000, _loss: 4.830018
+batch: 2200, _loss: 2.036701
+batch: 2400, _loss: 2.148581
+batch: 2600, _loss: 4.059442
+batch: 2800, _loss: 4.085763
+batch: 3000, _loss: 2.686873
+batch: 3200, _loss: 4.186962
+batch: 3400, _loss: 2.641472
+batch: 3600, _loss: 2.886901
+train 17, loss: 0.229139
+___________________epoch 18_____________________
+batch: 200, _loss: 5.707049
+batch: 400, _loss: 3.409115
+batch: 600, _loss: 5.494928
+batch: 800, _loss: 4.078818
+batch: 1000, _loss: 1.924561
+batch: 1200, _loss: 1.970345
+batch: 1400, _loss: 2.443749
+batch: 1600, _loss: 4.382031
+batch: 1800, _loss: 4.030167
+batch: 2000, _loss: 4.447378
+batch: 2200, _loss: 2.858954
+batch: 2400, _loss: 3.771527
+batch: 2600, _loss: 3.630158
+batch: 2800, _loss: 2.167539
+batch: 3000, _loss: 3.450958
+batch: 3200, _loss: 2.118938
+batch: 3400, _loss: 2.464366
+batch: 3600, _loss: 4.571720
+train 18, loss: 0.230843
+consistency score: 0.985924119565597
+test aver acc: {0: tensor(0.9349), 1: tensor(0.8893), 2: tensor(0.8675), 3: tensor(0.8585), 4: tensor(0.7797)}
+eval avg class IoU: 0.8457874778895716
+0.7285753248363992
+0.4332554377957994
+0.27037124269181034
+0.19545177943290193
+___________________epoch 19_____________________
+batch: 200, _loss: 4.390602
+batch: 400, _loss: 3.078462
+batch: 600, _loss: 4.206544
+batch: 800, _loss: 2.415357
+batch: 1000, _loss: 5.192869
+batch: 1200, _loss: 4.589278
+batch: 1400, _loss: 3.648618
+batch: 1600, _loss: 4.116218
+batch: 1800, _loss: 3.930219
+batch: 2000, _loss: 3.829831
+batch: 2200, _loss: 4.123893
+batch: 2400, _loss: 6.518534
+batch: 2600, _loss: 2.105780
+batch: 2800, _loss: 2.622100
+batch: 3000, _loss: 1.961247
+batch: 3200, _loss: 3.471050
+batch: 3400, _loss: 2.244006
+batch: 3600, _loss: 5.224713
+train 19, loss: 0.227299
+___________________epoch 20_____________________
+batch: 200, _loss: 4.130288
+batch: 400, _loss: 3.700797
+batch: 600, _loss: 3.590275
+batch: 800, _loss: 3.753982
+batch: 1000, _loss: 2.287420
+batch: 1200, _loss: 4.160050
+batch: 1400, _loss: 4.649798
+batch: 1600, _loss: 2.076129
+batch: 1800, _loss: 3.461230
+batch: 2000, _loss: 4.795648
+batch: 2200, _loss: 3.077199
+batch: 2400, _loss: 2.424627
+batch: 2600, _loss: 5.098887
+batch: 2800, _loss: 2.268497
+batch: 3000, _loss: 3.739669
+batch: 3200, _loss: 3.455107
+batch: 3400, _loss: 3.614528
+batch: 3600, _loss: 3.955794
+train 20, loss: 0.216496
+___________________epoch 21_____________________
+batch: 200, _loss: 3.805068
+batch: 400, _loss: 2.755317
+batch: 600, _loss: 3.285679
+batch: 800, _loss: 3.418466
+batch: 1000, _loss: 3.745790
+batch: 1200, _loss: 5.253055
+batch: 1400, _loss: 3.217276
+batch: 1600, _loss: 3.745121
+batch: 1800, _loss: 4.405219
+batch: 2000, _loss: 2.022441
+batch: 2200, _loss: 4.253751
+batch: 2400, _loss: 5.392578
+batch: 2600, _loss: 2.577506
+batch: 2800, _loss: 3.461398
+batch: 3000, _loss: 3.339658
+batch: 3200, _loss: 2.874429
+batch: 3400, _loss: 3.152387
+batch: 3600, _loss: 2.708146
+train 21, loss: 0.216178
+consistency score: 0.9854112332339792
+test aver acc: {0: tensor(0.9380), 1: tensor(0.9034), 2: tensor(0.8839), 3: tensor(0.8778), 4: tensor(0.7816)}
+eval avg class IoU: 0.8499401188991176
+0.7497646347236216
+0.4600362140417493
+0.28662280051032024
+0.19649873802048068
+___________________epoch 22_____________________
+batch: 200, _loss: 3.872761
+batch: 400, _loss: 2.700501
+batch: 600, _loss: 2.033302
+batch: 800, _loss: 6.019065
+batch: 1000, _loss: 3.187816
+batch: 1200, _loss: 3.720738
+batch: 1400, _loss: 2.198402
+batch: 1600, _loss: 2.169020
+batch: 1800, _loss: 3.001110
+batch: 2000, _loss: 2.839463
+batch: 2200, _loss: 2.920067
+batch: 2400, _loss: 3.705077
+batch: 2600, _loss: 3.862416
+batch: 2800, _loss: 3.171574
+batch: 3000, _loss: 4.613396
+batch: 3200, _loss: 5.576952
+batch: 3400, _loss: 3.455514
+batch: 3600, _loss: 3.447513
+train 22, loss: 0.212706
+___________________epoch 23_____________________
+batch: 200, _loss: 2.650138
+batch: 400, _loss: 3.114678
+batch: 600, _loss: 4.562057
+batch: 800, _loss: 1.844042
+batch: 1000, _loss: 2.212552
+batch: 1200, _loss: 3.378111
+batch: 1400, _loss: 3.148450
+batch: 1600, _loss: 3.091990
+batch: 1800, _loss: 4.807096
+batch: 2000, _loss: 3.063448
+batch: 2200, _loss: 1.726751
+batch: 2400, _loss: 3.419726
+batch: 2600, _loss: 2.417422
+batch: 2800, _loss: 3.338074
+batch: 3000, _loss: 3.684131
+batch: 3200, _loss: 4.397883
+batch: 3400, _loss: 2.386266
+batch: 3600, _loss: 3.568756
+train 23, loss: 0.212111
+___________________epoch 24_____________________
+batch: 200, _loss: 2.209091
+batch: 400, _loss: 2.776227
+batch: 600, _loss: 4.718167
+batch: 800, _loss: 3.230559
+batch: 1000, _loss: 3.807225
+batch: 1200, _loss: 2.432259
+batch: 1400, _loss: 3.887240
+batch: 1600, _loss: 4.596995
+batch: 1800, _loss: 4.568229
+batch: 2000, _loss: 3.118759
+batch: 2200, _loss: 3.362893
+batch: 2400, _loss: 4.091948
+batch: 2600, _loss: 3.841674
+batch: 2800, _loss: 3.948827
+batch: 3000, _loss: 3.229125
+batch: 3200, _loss: 2.961191
+batch: 3400, _loss: 2.264812
+batch: 3600, _loss: 2.676261
+train 24, loss: 0.210538
+consistency score: 0.9856997175827822
+test aver acc: {0: tensor(0.9310), 1: tensor(0.9027), 2: tensor(0.8815), 3: tensor(0.8749), 4: tensor(0.7628)}
+eval avg class IoU: 0.8399162598641341
+0.7500957270782816
+0.4612547743493128
+0.2926910416709172
+0.1915448405420757
+___________________epoch 25_____________________
+batch: 200, _loss: 2.797514
+batch: 400, _loss: 2.541872
+batch: 600, _loss: 2.829440
+batch: 800, _loss: 3.602342
+batch: 1000, _loss: 4.046788
+batch: 1200, _loss: 3.493683
+batch: 1400, _loss: 4.378855
+batch: 1600, _loss: 2.910174
+batch: 1800, _loss: 3.402565
+batch: 2000, _loss: 2.233598
+batch: 2200, _loss: 2.737180
+batch: 2400, _loss: 3.023725
+batch: 2600, _loss: 3.506917
+batch: 2800, _loss: 2.787092
+batch: 3000, _loss: 3.643569
+batch: 3200, _loss: 1.853062
+batch: 3400, _loss: 1.462190
+batch: 3600, _loss: 3.389890
+train 25, loss: 0.205380
+___________________epoch 26_____________________
+batch: 200, _loss: 3.350016
+batch: 400, _loss: 3.342079
+batch: 600, _loss: 5.132769
+batch: 800, _loss: 3.203788
+batch: 1000, _loss: 3.283358
+batch: 1200, _loss: 2.501706
+batch: 1400, _loss: 3.110360
+batch: 1600, _loss: 4.107167
+batch: 1800, _loss: 2.798706
+batch: 2000, _loss: 3.246343
+batch: 2200, _loss: 3.819966
+batch: 2400, _loss: 3.067434
+batch: 2600, _loss: 3.311034
+batch: 2800, _loss: 4.572028
+batch: 3000, _loss: 2.912748
+batch: 3200, _loss: 3.745595
+batch: 3400, _loss: 4.257258
+batch: 3600, _loss: 2.358855
+train 26, loss: 0.205303
+___________________epoch 27_____________________
+batch: 200, _loss: 2.723956
+batch: 400, _loss: 2.786081
+batch: 600, _loss: 3.682818
+batch: 800, _loss: 2.664700
+batch: 1000, _loss: 2.430488
+batch: 1200, _loss: 3.444410
+batch: 1400, _loss: 3.015483
+batch: 1600, _loss: 5.699081
+batch: 1800, _loss: 4.262716
+batch: 2000, _loss: 3.336196
+batch: 2200, _loss: 5.817382
+batch: 2400, _loss: 3.657389
+batch: 2600, _loss: 2.323455
+batch: 2800, _loss: 2.436282
+batch: 3000, _loss: 3.642825
+batch: 3200, _loss: 3.714816
+batch: 3400, _loss: 4.541863
+batch: 3600, _loss: 3.081197
+train 27, loss: 0.205901
+consistency score: 0.9787708629261364
+test aver acc: {0: tensor(0.9337), 1: tensor(0.9031), 2: tensor(0.8841), 3: tensor(0.8764), 4: tensor(0.7787)}
+eval avg class IoU: 0.8448054637556017
+0.7478571899767168
+0.4569166820428136
+0.2864682630812847
+0.18332666831294828
+___________________epoch 28_____________________
+batch: 200, _loss: 4.294446
+batch: 400, _loss: 4.351030
+batch: 600, _loss: 2.773389
+batch: 800, _loss: 4.404880
+batch: 1000, _loss: 1.578455
+batch: 1200, _loss: 3.881625
+batch: 1400, _loss: 2.472952
+batch: 1600, _loss: 5.411361
+batch: 1800, _loss: 2.688236
+batch: 2000, _loss: 1.670667
+batch: 2200, _loss: 2.098850
+batch: 2400, _loss: 3.763878
+batch: 2600, _loss: 3.129731
+batch: 2800, _loss: 2.663616
+batch: 3000, _loss: 1.738288
+batch: 3200, _loss: 4.123436
+batch: 3400, _loss: 2.964767
+batch: 3600, _loss: 2.831312
+train 28, loss: 0.204017
+___________________epoch 29_____________________
+batch: 200, _loss: 1.901046
+batch: 400, _loss: 1.815921
+batch: 600, _loss: 2.575781
+batch: 800, _loss: 3.699565
+batch: 1000, _loss: 3.710481
+batch: 1200, _loss: 3.854504
+batch: 1400, _loss: 2.291792
+batch: 1600, _loss: 4.685268
+batch: 1800, _loss: 1.834643
+batch: 2000, _loss: 3.500322
+batch: 2200, _loss: 3.017326
+batch: 2400, _loss: 2.218135
+batch: 2600, _loss: 3.293988
+batch: 2800, _loss: 2.776402
+batch: 3000, _loss: 3.421224
+batch: 3200, _loss: 2.907002
+batch: 3400, _loss: 2.724989
+batch: 3600, _loss: 3.343098
+train 29, loss: 0.205329
+___________________epoch 30_____________________
+batch: 200, _loss: 2.473154
+batch: 400, _loss: 2.730153
+batch: 600, _loss: 2.730318
+batch: 800, _loss: 2.909756
+batch: 1000, _loss: 3.593244
+batch: 1200, _loss: 3.464542
+batch: 1400, _loss: 2.999505
+batch: 1600, _loss: 2.399475
+batch: 1800, _loss: 1.976996
+batch: 2000, _loss: 2.162310
+batch: 2200, _loss: 3.708805
+batch: 2400, _loss: 3.242334
+batch: 2600, _loss: 2.213552
+batch: 2800, _loss: 2.720073
+batch: 3000, _loss: 2.260672
+batch: 3200, _loss: 4.281314
+batch: 3400, _loss: 1.853260
+batch: 3600, _loss: 3.432085
+train 30, loss: 0.199680
+consistency score: 0.9784185690957992
+test aver acc: {0: tensor(0.9370), 1: tensor(0.8963), 2: tensor(0.8749), 3: tensor(0.8672), 4: tensor(0.7615)}
+eval avg class IoU: 0.845904961440781
+0.7419713405797123
+0.4673178690062286
+0.3016700486094914
+0.18235053289808076
+___________________epoch 31_____________________
+batch: 200, _loss: 4.029303
+batch: 400, _loss: 4.684154
+batch: 600, _loss: 2.316801
+batch: 800, _loss: 3.489287
+batch: 1000, _loss: 3.397164
+batch: 1200, _loss: 2.820054
+batch: 1400, _loss: 2.284296
+batch: 1600, _loss: 2.333130
+batch: 1800, _loss: 2.700867
+batch: 2000, _loss: 2.969388
+batch: 2200, _loss: 2.584049
+batch: 2400, _loss: 1.142409
+batch: 2600, _loss: 1.882498
+batch: 2800, _loss: 3.251841
+batch: 3000, _loss: 4.637444
+batch: 3200, _loss: 1.471696
+batch: 3400, _loss: 3.703611
+batch: 3600, _loss: 3.439366
+train 31, loss: 0.200472
+___________________epoch 32_____________________
+batch: 200, _loss: 4.062144
+batch: 400, _loss: 1.905106
+batch: 600, _loss: 3.797439
+batch: 800, _loss: 3.883322
+batch: 1000, _loss: 2.212866
+batch: 1200, _loss: 2.470188
+batch: 1400, _loss: 1.639183
+batch: 1600, _loss: 2.263882
+batch: 1800, _loss: 3.501183
+batch: 2000, _loss: 3.031354
+batch: 2200, _loss: 2.645144
+batch: 2400, _loss: 3.337700
+batch: 2600, _loss: 3.808973
+batch: 2800, _loss: 2.024458
+batch: 3000, _loss: 2.068383
+batch: 3200, _loss: 4.383107
+batch: 3400, _loss: 2.844821
+batch: 3600, _loss: 3.013106
+train 32, loss: 0.199646
+___________________epoch 33_____________________
+batch: 200, _loss: 2.722506
+batch: 400, _loss: 3.093870
+batch: 600, _loss: 2.632117
+batch: 800, _loss: 2.933855
+batch: 1000, _loss: 2.605625
+batch: 1200, _loss: 2.370241
+batch: 1400, _loss: 2.202311
+batch: 1600, _loss: 3.757141
+batch: 1800, _loss: 1.829576
+batch: 2000, _loss: 3.583995
+batch: 2200, _loss: 2.168434
+batch: 2400, _loss: 3.396675
+batch: 2600, _loss: 2.468256
+batch: 2800, _loss: 2.338774
+batch: 3000, _loss: 3.473433
+batch: 3200, _loss: 3.344558
+batch: 3400, _loss: 3.090165
+batch: 3600, _loss: 3.598570
+train 33, loss: 0.199516
+consistency score: 0.9805723096503586
+test aver acc: {0: tensor(0.9282), 1: tensor(0.8937), 2: tensor(0.8751), 3: tensor(0.8683), 4: tensor(0.7717)}
+eval avg class IoU: 0.829688624305648
+0.7276834595285839
+0.4655272756550528
+0.2955632271953796
+0.18554056204214042
+___________________epoch 34_____________________
+batch: 200, _loss: 3.840202
+batch: 400, _loss: 3.672769
+batch: 600, _loss: 2.281367
+batch: 800, _loss: 3.244094
+batch: 1000, _loss: 2.925983
+batch: 1200, _loss: 2.990391
+batch: 1400, _loss: 2.479834
+batch: 1600, _loss: 2.544616
+batch: 1800, _loss: 1.901158
+batch: 2000, _loss: 3.729721
+batch: 2200, _loss: 1.940461
+batch: 2400, _loss: 2.070336
+batch: 2600, _loss: 3.564527
+batch: 2800, _loss: 1.964994
+batch: 3000, _loss: 2.614334
+batch: 3200, _loss: 3.310477
+batch: 3400, _loss: 2.092984
+batch: 3600, _loss: 2.261227
+train 34, loss: 0.197432
+___________________epoch 35_____________________
+batch: 200, _loss: 3.430967
+batch: 400, _loss: 2.718363
+batch: 600, _loss: 7.238757
+batch: 800, _loss: 3.037823
+batch: 1000, _loss: 3.274813
+batch: 1200, _loss: 4.984231
+batch: 1400, _loss: 2.997531
+batch: 1600, _loss: 2.943359
+batch: 1800, _loss: 2.556149
+batch: 2000, _loss: 4.529127
+batch: 2200, _loss: 3.498693
+batch: 2400, _loss: 3.383180
+batch: 2600, _loss: 4.237923
+batch: 2800, _loss: 2.203320
+batch: 3000, _loss: 3.241914
+batch: 3200, _loss: 3.552931
+batch: 3400, _loss: 2.955744
+batch: 3600, _loss: 4.619638
+train 35, loss: 0.197258
+___________________epoch 36_____________________
+batch: 200, _loss: 4.677120
+batch: 400, _loss: 3.314698
+batch: 600, _loss: 3.007506
+batch: 800, _loss: 3.385883
+batch: 1000, _loss: 3.272058
+batch: 1200, _loss: 1.713887
+batch: 1400, _loss: 2.077132
+batch: 1600, _loss: 3.767941
+batch: 1800, _loss: 2.639653
+batch: 2000, _loss: 3.138956
+batch: 2200, _loss: 2.430178
+batch: 2400, _loss: 2.558734
+batch: 2600, _loss: 2.138943
+batch: 2800, _loss: 2.669962
+batch: 3000, _loss: 4.071621
+batch: 3200, _loss: 2.490260
+batch: 3400, _loss: 6.117307
+batch: 3600, _loss: 3.251051
+train 36, loss: 0.196346
+consistency score: 0.9775739007486494
+test aver acc: {0: tensor(0.9275), 1: tensor(0.8905), 2: tensor(0.8709), 3: tensor(0.8608), 4: tensor(0.7896)}
+eval avg class IoU: 0.8216332836248268
+0.7279937682196781
+0.45313798916462406
+0.293541245459239
+0.190958330778586
+___________________epoch 37_____________________
+batch: 200, _loss: 2.339365
+batch: 400, _loss: 2.353297
+batch: 600, _loss: 2.487564
+batch: 800, _loss: 3.605172
+batch: 1000, _loss: 3.022653
+batch: 1200, _loss: 2.545323
+batch: 1400, _loss: 3.816695
+batch: 1600, _loss: 2.915345
+batch: 1800, _loss: 2.074078
+batch: 2000, _loss: 4.639628
+batch: 2200, _loss: 3.142287
+batch: 2400, _loss: 2.194875
+batch: 2600, _loss: 4.770877
+batch: 2800, _loss: 2.658424
+batch: 3000, _loss: 2.034287
+batch: 3200, _loss: 4.059428
+batch: 3400, _loss: 2.555669
+batch: 3600, _loss: 4.179917
+train 37, loss: 0.194511
+___________________epoch 38_____________________
+batch: 200, _loss: 3.310571
+batch: 400, _loss: 5.972877
+batch: 600, _loss: 3.299944
+batch: 800, _loss: 3.468268
+batch: 1000, _loss: 3.941026
+batch: 1200, _loss: 2.390941
+batch: 1400, _loss: 4.740529
+batch: 1600, _loss: 2.413129
+batch: 1800, _loss: 1.958149
+batch: 2000, _loss: 3.738643
+batch: 2200, _loss: 3.878290
+batch: 2400, _loss: 1.968976
+batch: 2600, _loss: 1.831344
+batch: 2800, _loss: 5.414059
+batch: 3000, _loss: 3.173295
+batch: 3200, _loss: 2.183159
+batch: 3400, _loss: 3.492984
+batch: 3600, _loss: 2.278093
+train 38, loss: 0.194524
+___________________epoch 39_____________________
+batch: 200, _loss: 2.351517
+batch: 400, _loss: 4.611535
+batch: 600, _loss: 2.305499
+batch: 800, _loss: 2.489970
+batch: 1000, _loss: 2.340115
+batch: 1200, _loss: 2.042996
+batch: 1400, _loss: 2.255349
+batch: 1600, _loss: 2.786569
+batch: 1800, _loss: 2.458523
+batch: 2000, _loss: 2.374776
+batch: 2200, _loss: 2.610910
+batch: 2400, _loss: 2.948902
+batch: 2600, _loss: 3.266832
+batch: 2800, _loss: 2.839578
+batch: 3000, _loss: 3.506005
+batch: 3200, _loss: 3.712618
+batch: 3400, _loss: 2.688642
+batch: 3600, _loss: 2.364035
+train 39, loss: 0.194244
+consistency score: 0.9830956267173528
+test aver acc: {0: tensor(0.9330), 1: tensor(0.9017), 2: tensor(0.8840), 3: tensor(0.8767), 4: tensor(0.7841)}
+eval avg class IoU: 0.8423465595736312
+0.7441245174621559
+0.47272916084358885
+0.30412155876745073
+0.21182714037779896
+___________________epoch 40_____________________
+batch: 200, _loss: 3.933626
+batch: 400, _loss: 1.672222
+batch: 600, _loss: 5.072301
+batch: 800, _loss: 3.680404
+batch: 1000, _loss: 1.459221
+batch: 1200, _loss: 2.544180
+batch: 1400, _loss: 2.341387
+batch: 1600, _loss: 3.661396
+batch: 1800, _loss: 2.431873
+batch: 2000, _loss: 2.277143
+batch: 2200, _loss: 3.221553
+batch: 2400, _loss: 3.899830
+batch: 2600, _loss: 1.729762
+batch: 2800, _loss: 2.111988
+batch: 3000, _loss: 3.225947
+batch: 3200, _loss: 3.033770
+batch: 3400, _loss: 1.506972
+batch: 3600, _loss: 1.901913
+train 40, loss: 0.182398
+___________________epoch 41_____________________
+batch: 200, _loss: 3.905524
+batch: 400, _loss: 2.566467
+batch: 600, _loss: 1.717089
+batch: 800, _loss: 4.294836
+batch: 1000, _loss: 4.897300
+batch: 1200, _loss: 2.537747
+batch: 1400, _loss: 2.060320
+batch: 1600, _loss: 1.884492
+batch: 1800, _loss: 2.210609
+batch: 2000, _loss: 4.629426
+batch: 2200, _loss: 3.471611
+batch: 2400, _loss: 2.982898
+batch: 2600, _loss: 2.759385
+batch: 2800, _loss: 2.395156
+batch: 3000, _loss: 1.866501
+batch: 3200, _loss: 2.675173
+batch: 3400, _loss: 2.088257
+batch: 3600, _loss: 1.272263
+train 41, loss: 0.179794
+___________________epoch 42_____________________
+batch: 200, _loss: 3.395894
+batch: 400, _loss: 2.091206
+batch: 600, _loss: 2.310926
+batch: 800, _loss: 2.398031
+batch: 1000, _loss: 2.245899
+batch: 1200, _loss: 2.152565
+batch: 1400, _loss: 2.135915
+batch: 1600, _loss: 3.698322
+batch: 1800, _loss: 2.141032
+batch: 2000, _loss: 3.836731
+batch: 2200, _loss: 2.243668
+batch: 2400, _loss: 4.875688
+batch: 2600, _loss: 2.603394
+batch: 2800, _loss: 1.678723
+batch: 3000, _loss: 3.114430
+batch: 3200, _loss: 2.049542
+batch: 3400, _loss: 2.049137
+batch: 3600, _loss: 3.936190
+train 42, loss: 0.179120
+consistency score: 0.9833879769292567
+test aver acc: {0: tensor(0.9417), 1: tensor(0.9094), 2: tensor(0.8917), 3: tensor(0.8844), 4: tensor(0.7991)}
+eval avg class IoU: 0.8589069756306823
+0.7612705171306046
+0.4863063456934761
+0.3255823103849876
+0.2158915307262035
+___________________epoch 43_____________________
+batch: 200, _loss: 2.778638
+batch: 400, _loss: 2.828582
+batch: 600, _loss: 2.575449
+batch: 800, _loss: 2.886482
+batch: 1000, _loss: 2.443564
+batch: 1200, _loss: 1.788391
+batch: 1400, _loss: 1.959094
+batch: 1600, _loss: 2.242139
+batch: 1800, _loss: 4.979985
+batch: 2000, _loss: 2.384466
+batch: 2200, _loss: 2.154464
+batch: 2400, _loss: 2.085603
+batch: 2600, _loss: 2.338969
+batch: 2800, _loss: 2.853334
+batch: 3000, _loss: 2.872870
+batch: 3200, _loss: 2.485986
+batch: 3400, _loss: 2.576073
+batch: 3600, _loss: 3.466656
+train 43, loss: 0.178058
+___________________epoch 44_____________________
+batch: 200, _loss: 1.854456
+batch: 400, _loss: 2.009030
+batch: 600, _loss: 1.934878
+batch: 800, _loss: 2.347794
+batch: 1000, _loss: 3.354113
+batch: 1200, _loss: 1.841163
+batch: 1400, _loss: 3.045722
+batch: 1600, _loss: 2.472645
+batch: 1800, _loss: 2.004887
+batch: 2000, _loss: 2.628547
+batch: 2200, _loss: 1.796206
+batch: 2400, _loss: 3.325894
+batch: 2600, _loss: 1.922471
+batch: 2800, _loss: 2.211322
+batch: 3000, _loss: 2.007051
+batch: 3200, _loss: 2.787149
+batch: 3400, _loss: 3.212957
+batch: 3600, _loss: 1.675583
+train 44, loss: 0.180682
+___________________epoch 45_____________________
+batch: 200, _loss: 2.894169
+batch: 400, _loss: 2.004636
+batch: 600, _loss: 4.107939
+batch: 800, _loss: 2.744569
+batch: 1000, _loss: 3.231380
+batch: 1200, _loss: 2.962239
+batch: 1400, _loss: 1.824311
+batch: 1600, _loss: 1.990256
+batch: 1800, _loss: 2.705713
+batch: 2000, _loss: 2.983606
+batch: 2200, _loss: 3.110450
+batch: 2400, _loss: 3.274556
+batch: 2600, _loss: 2.816830
+batch: 2800, _loss: 2.296590
+batch: 3000, _loss: 3.942270
+batch: 3200, _loss: 2.803943
+batch: 3400, _loss: 3.125478
+batch: 3600, _loss: 2.563691
+train 45, loss: 0.181548
+consistency score: 0.9850894115010246
+test aver acc: {0: tensor(0.9393), 1: tensor(0.9100), 2: tensor(0.8912), 3: tensor(0.8840), 4: tensor(0.7972)}
+eval avg class IoU: 0.8552509030626942
+0.7632615334623124
+0.5033141282855033
+0.3258614482991937
+0.21961969522327326
+___________________epoch 46_____________________
+batch: 200, _loss: 1.759450
+batch: 400, _loss: 2.861758
+batch: 600, _loss: 2.143011
+batch: 800, _loss: 1.838739
+batch: 1000, _loss: 2.779746
+batch: 1200, _loss: 1.770482
+batch: 1400, _loss: 3.134113
+batch: 1600, _loss: 2.873010
+batch: 1800, _loss: 2.604634
+batch: 2000, _loss: 2.131009
+batch: 2200, _loss: 1.713903
+batch: 2400, _loss: 1.367941
+batch: 2600, _loss: 4.539772
+batch: 2800, _loss: 1.747142
+batch: 3000, _loss: 2.381602
+batch: 3200, _loss: 2.012037
+batch: 3400, _loss: 3.219117
+batch: 3600, _loss: 1.784921
+train 46, loss: 0.178505
+___________________epoch 47_____________________
+batch: 200, _loss: 7.171482
+batch: 400, _loss: 2.954449
+batch: 600, _loss: 2.071455
+batch: 800, _loss: 4.371668
+batch: 1000, _loss: 1.897016
+batch: 1200, _loss: 2.171926
+batch: 1400, _loss: 3.358154
+batch: 1600, _loss: 2.246878
+batch: 1800, _loss: 1.576104
+batch: 2000, _loss: 2.898708
+batch: 2200, _loss: 2.091256
+batch: 2400, _loss: 3.451159
+batch: 2600, _loss: 1.751540
+batch: 2800, _loss: 5.384975
+batch: 3000, _loss: 1.977709
+batch: 3200, _loss: 1.094214
+batch: 3400, _loss: 3.177867
+batch: 3600, _loss: 2.998337
+train 47, loss: 0.179425
+___________________epoch 48_____________________
+batch: 200, _loss: 3.838115
+batch: 400, _loss: 3.171487
+batch: 600, _loss: 2.048346
+batch: 800, _loss: 2.873456
+batch: 1000, _loss: 3.935592
+batch: 1200, _loss: 3.674196
+batch: 1400, _loss: 3.885822
+batch: 1600, _loss: 1.543589
+batch: 1800, _loss: 2.433323
+batch: 2000, _loss: 2.553591
+batch: 2200, _loss: 3.915950
+batch: 2400, _loss: 4.464936
+batch: 2600, _loss: 2.101789
+batch: 2800, _loss: 3.753515
+batch: 3000, _loss: 2.586371
+batch: 3200, _loss: 2.965491
+batch: 3400, _loss: 4.619230
+batch: 3600, _loss: 3.210454
+train 48, loss: 0.176737
+consistency score: 0.9839312898775149
+test aver acc: {0: tensor(0.9353), 1: tensor(0.9077), 2: tensor(0.8914), 3: tensor(0.8833), 4: tensor(0.7899)}
+eval avg class IoU: 0.848028812221405
+0.7539369233601212
+0.4812577230044555
+0.31285100954101447
+0.2010540224615666
+___________________epoch 49_____________________
+batch: 200, _loss: 2.916484
+batch: 400, _loss: 1.991912
+batch: 600, _loss: 2.230539
+batch: 800, _loss: 1.998033
+batch: 1000, _loss: 1.995813
+batch: 1200, _loss: 2.101111
+batch: 1400, _loss: 3.108968
+batch: 1600, _loss: 1.500717
+batch: 1800, _loss: 2.873603
+batch: 2000, _loss: 4.714629
+batch: 2200, _loss: 4.123940
+batch: 2400, _loss: 2.706601
+batch: 2600, _loss: 5.094111
+batch: 2800, _loss: 2.333412
+batch: 3000, _loss: 2.535033
+batch: 3200, _loss: 4.971840
+batch: 3400, _loss: 3.668543
+batch: 3600, _loss: 2.123508
+train 49, loss: 0.177770
