@@ -1,14 +1,14 @@
 TRAIN:
   LEARNING_RATE: 0.01
   MOMENTUM: 0.9
-  BATCH_SIZE: 8
+  BATCH_SIZE: 16
   #orginal 16
   MAX_EPOCH: 50
   #pointnet:step
   #point transformer:cos
   SCHEDULER: cos # adam
   IS_PRETRAINED: False
-  PRETRAINED_MODEL_PATH: checkpoints/ptv3/models/model.t7
+  PRETRAINED_MODEL_PATH: checkpoints/pt_v3/models/model.t7
   #  - checkpoints/MC0.t7
   #  - checkpoints/MC1.t7
   #  - checkpoints/MC2.t7

@@ -8,7 +8,7 @@
             "name": "Python current file",
             "type": "debugpy",
             "request": "launch",
-            "program": "/root/autodl-tmp/reproduce-campus3d-main/run.py",
+            "program": "/root/autodl-tmp/Test/run.py",
             "console": "integratedTerminal",
             "args": [
                 "--model",
@@ -16,7 +16,7 @@
                 "--mc_level",
                 "-1",
                 "--exp_name",
-                "test"
+                "pt_v3"
             ]
         }
     ]

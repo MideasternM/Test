@@ -14,14 +14,14 @@ import torch
 import torch.nn as nn
 import spconv.pytorch as spconv
 import torch_scatter
-from timm.models.layers import DropPath
+from timm.layers import DropPath
 from collections import OrderedDict
 import copy
 
-# try:
-#     import flash_attn
-# except ImportError:
-flash_attn = None
+try:
+    import flash_attn
+except ImportError:
+    flash_attn = None
 
 from .serialization import encode
 
@@ -806,7 +806,7 @@ class Decoder(PointModule):
         pre_norm=True,
         shuffle_orders=True,
         enable_rpe=False,
-        enable_flash=False,
+        enable_flash=True,
         upcast_attention=False,
         upcast_softmax=False,
         cls_mode=False,
@@ -954,7 +954,7 @@ class PointTransformerV3(PointModule):
         pre_norm=True,
         shuffle_orders=True,
         enable_rpe=False,
-        enable_flash=False,
+        enable_flash=True,
         upcast_attention=False,
         upcast_softmax=False,
         cls_mode=False,
@@ -1156,6 +1156,6 @@ class PointTransformerV3(PointModule):
             num_classes=[3,4,6,9,15]
             for i in range(len(self.seg_heads)):
                 res = self.seg_heads[i](point.feat)
-                res = res.reshape(8,num_classes[i],2048)
+                res = res.reshape(16,num_classes[i],2048)
                 seg_logits.append(res)
         return seg_logits

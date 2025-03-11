@@ -1,0 +1,57 @@
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 8.325728
+batch: 400, _loss: 8.446808
+batch: 600, _loss: 8.633370
+batch: 800, _loss: 8.286312
+batch: 1000, _loss: 8.729765
+batch: 1200, _loss: 8.489502
+batch: 1400, _loss: 8.325134
+batch: 1600, _loss: 8.456826
+batch: 1800, _loss: 8.763009
+batch: 2000, _loss: 9.048051
+batch: 2200, _loss: 8.612966
+batch: 2400, _loss: 8.548126
+batch: 2600, _loss: 8.762444
+batch: 2800, _loss: 8.568187
+batch: 3000, _loss: 8.548883
+batch: 3200, _loss: 8.530904
+batch: 3400, _loss: 8.524028
+batch: 3600, _loss: 8.698034
+train 0, loss: 0.536039
+consistency score: 0.1763015951733653
+test aver acc: {0: tensor(0.3061), 1: tensor(0.2484), 2: tensor(0.2271), 3: tensor(0.0629), 4: tensor(0.0467)}
+eval avg class IoU: 0.11613896843716465
+0.08321521572120358
+0.054533720738747314
+0.021096690403345445
+0.013210779425935588
+___________________epoch 1_____________________
+batch: 200, _loss: 8.689963
+batch: 400, _loss: 8.671003

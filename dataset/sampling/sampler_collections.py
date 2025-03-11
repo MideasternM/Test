@@ -75,10 +75,10 @@ def _update_from_config(obj, cfg):
 
 def _gen_empty_sample(num_points_per_sample, modified_shape, label_shape, full_label=-1):
     return \
-        np.zeros((num_points_per_sample, modified_shape), dtype=np.float), \
-        np.zeros((num_points_per_sample, 3), dtype=np.float), \
-        np.full((num_points_per_sample, label_shape), full_label, dtype=np.int), \
-        np.zeros((num_points_per_sample, 3), dtype=np.float)
+        np.zeros((num_points_per_sample, modified_shape), dtype=float), \
+        np.zeros((num_points_per_sample, 3), dtype=float), \
+        np.full((num_points_per_sample, label_shape), full_label, dtype=int), \
+        np.zeros((num_points_per_sample, 3), dtype=float)
 
 
 

@@ -918,3 +918,6 @@ batch: 200, _loss: 5.112626
 Using GPU : 0 from 1 devices
 length of train loader: 3647
 ___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________

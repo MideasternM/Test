@@ -36,12 +36,12 @@ class TorchDataset(D.Dataset):
         if item not in self.__dict__.keys():
             if item == 'random_machine':
                 return getattr(self.data_sampler, item)
-            try:
-                return [getattr(scene_data,item) for scene_data in self.scene_data_list]
-            except Exception as e:
-                import traceback
-                traceback.print_exc()
-                raise AttributeError('{} is not attribute of DataSampler'.format(item))
+            # try:
+            return [getattr(scene_data,item) for scene_data in self.scene_data_list]
+            # except Exception as e:
+            #     import traceback
+            #     traceback.print_exc()
+            #     raise AttributeError('{} is not attribute of DataSampler'.format(item))
 
 
 class TorchDataLoader(D.DataLoader):
