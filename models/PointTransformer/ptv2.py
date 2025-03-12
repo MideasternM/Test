@@ -556,9 +556,11 @@ class PTSegV2(nn.Module):
         coord, feat, offset = points
         seg_logits = []
         num_classes=[3,4,6,9,15]
-        for i in range(len(self.seg_heads)):
-            res = self.seg_heads[i](feat)
-            res = res.reshape(16,num_classes[i],2048)
-            seg_logits.append(res)
-        if return_feats: return seg_logits, feat
-        return seg_logits
+        # for i in range(len(self.seg_heads)):
+        #     res = self.seg_heads[i](feat)
+        #     res = res.reshape(16,num_classes[i],2048)
+        #     seg_logits.append(res)
+        res = self.seg_heads[2](feat)
+        res = res.reshape(16,6,2048)
+        if return_feats: return res, feat
+        return res

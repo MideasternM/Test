@@ -1153,9 +1153,11 @@ class PointTransformerV3(PointModule):
             # point4 = self.dec5(point4)
             # point_list = [point, point1, point2, point3, point4]
             seg_logits = []
-            num_classes=[3,4,6,9,15]
-            for i in range(len(self.seg_heads)):
-                res = self.seg_heads[i](point.feat)
-                res = res.reshape(16,num_classes[i],2048)
-                seg_logits.append(res)
-        return seg_logits
+            # num_classes=[3,4,6,9,15]
+            # for i in range(len(self.seg_heads)):
+            #     res = self.seg_heads[i](point.feat)
+            #     res = res.reshape(16,num_classes[i],2048)
+            #     seg_logits.append(res)
+            res = self.seg_heads[2](point.feat)
+            res = res.reshape(16,6,2048)
+        return res
