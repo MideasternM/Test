@@ -15,7 +15,7 @@ def square_distance(src, dst):
     """
     Calculate Euclid distance between each two points.
 
-    src^T * dst = xn * xm + yn * ym + zn * zm；
+    src^T * dst = xn * xm + yn * ym + zn * zm
     sum(src^2, dim=-1) = xn*xn + yn*yn + zn*zn;
     sum(dst^2, dim=-1) = xm*xm + ym*ym + zm*zm;
     dist = (xn - xm)^2 + (yn - ym)^2 + (zn - zm)^2
@@ -78,8 +78,37 @@ def farthest_point_sample(xyz, npoint):
         farthest = torch.max(distance, -1)[1]
     return centroids
 
+def farthest_point_sample_prior(xyz, mask, npoint):
+    """
+    Input:
+        xyz: pointcloud data, [B, N, 3]
+        npoint: number of samples
+    Return:
+        centroids: sampled pointcloud index, [B, npoint]
+    """
+    device = xyz.device
+    B, N, C = xyz.shape
+    centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
+    distance = torch.ones(B, N).to(device) * 1e10
+    farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
+    batch_indices = torch.arange(B, dtype=torch.long).to(device)
 
-def query_ball_point(radius, nsample, xyz, new_xyz):
+    for b in range(B):
+        valid_indices = torch.where(mask[b] == 1)[0]
+        if len(valid_indices) > 0:
+            farthest[b] = valid_indices[torch.randint(0, len(valid_indices), (1,))]
+
+    for i in range(npoint):
+        centroids[:, i] = farthest
+        centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
+        dist = torch.sum((xyz - centroid) ** 2, -1)
+        dist = torch.where(mask == 1, dist, torch.tensor(1e10, device=device))
+        mask = dist < distance
+        distance[mask] = dist[mask]
+        farthest = torch.max(distance, -1)[1]
+    return centroids
+
+def query_ball_point(radius, nsample, xyz, new_xyz, mask=None):
     """
     Input:
         radius: local region radius
@@ -94,6 +123,10 @@ def query_ball_point(radius, nsample, xyz, new_xyz):
     _, S, _ = new_xyz.shape
     group_idx = torch.arange(N, dtype=torch.long).to(device).view(1, 1, N).repeat([B, S, 1])
     sqrdists = square_distance(new_xyz, xyz)
+    if mask != None:
+        mask_expanded = mask.unsqueeze(1).expand(-1, sqrdists.shape[1], -1)
+        mask_expanded = mask_expanded==1
+        sqrdists[~mask_expanded] = 1e10
     group_idx[sqrdists > radius ** 2] = N
     group_idx = group_idx.sort(dim=-1)[0][:, :, :nsample]
     group_first = group_idx[:, :, 0].view(B, S, 1).repeat([1, 1, nsample])
@@ -102,7 +135,7 @@ def query_ball_point(radius, nsample, xyz, new_xyz):
     return group_idx
 
 
-def sample_and_group(npoint, radius, nsample, xyz, points, returnfps=False):
+def sample_and_group(npoint, radius, nsample, xyz, points, mask=None, returnfps=False):
     """
     Input:
         npoint:
@@ -116,11 +149,17 @@ def sample_and_group(npoint, radius, nsample, xyz, points, returnfps=False):
     """
     B, N, C = xyz.shape
     S = npoint
-    fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
+    if mask != None:
+        fps_idx = farthest_point_sample_prior(xyz, mask, npoint)
+    else:
+        fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
     torch.cuda.empty_cache()
     new_xyz = index_points(xyz, fps_idx)
     torch.cuda.empty_cache()
-    idx = query_ball_point(radius, nsample, xyz, new_xyz)
+    if mask != None:
+        idx = query_ball_point(radius, nsample, xyz, new_xyz, mask)
+    else:
+        idx = query_ball_point(radius, nsample, xyz, new_xyz)
     torch.cuda.empty_cache()
     grouped_xyz = index_points(xyz, idx) # [B, npoint, nsample, C]
     torch.cuda.empty_cache()
@@ -173,7 +212,7 @@ class PointNetSetAbstraction(nn.Module):
             last_channel = out_channel
         self.group_all = group_all
 
-    def forward(self, xyz, points):
+    def forward(self, xyz, points, mask=None):
         """
         Input:
             xyz: input points position data, [B, C, N]
@@ -189,7 +228,10 @@ class PointNetSetAbstraction(nn.Module):
         if self.group_all:
             new_xyz, new_points = sample_and_group_all(xyz, points)
         else:
-            new_xyz, new_points = sample_and_group(self.npoint, self.radius, self.nsample, xyz, points)
+            if mask != None:
+                new_xyz, new_points = sample_and_group(self.npoint, self.radius, self.nsample, xyz, points, mask)
+            else:
+                new_xyz, new_points = sample_and_group(self.npoint, self.radius, self.nsample, xyz, points)
         # new_xyz: sampled points position data, [B, npoint, C]
         # new_points: sampled points data, [B, npoint, nsample, C+D]
         new_points = new_points.permute(0, 3, 2, 1) # [B, C+D, nsample,npoint]

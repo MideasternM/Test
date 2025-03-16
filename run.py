@@ -160,8 +160,8 @@ def train(args, io, cfg, HM):
                 offset = offset.to('cuda')
                 offset = offset.to(torch.int32)
 
-                feat = min_max_normalize(feat, range_min=-1, range_max=1)
-                coord = min_max_normalize(coord, range_min=-1, range_max=1)
+                # feat = min_max_normalize(feat, range_min=-1, range_max=1)
+                # coord = min_max_normalize(coord, range_min=-1, range_max=1)
                 feat = feat.to(device)
                 coord = coord.to(device)
 
@@ -172,8 +172,8 @@ def train(args, io, cfg, HM):
                 offset = offset.to('cuda')
                 offset = offset.to(torch.int32)
 
-                feat = min_max_normalize(feat, range_min=-1, range_max=1)
-                coord = min_max_normalize(coord, range_min=-1, range_max=1)
+                # feat = min_max_normalize(feat, range_min=-1, range_max=1)
+                # coord = min_max_normalize(coord, range_min=-1, range_max=1)
                 feat = feat.to(device)
                 coord = coord.to(device)
 

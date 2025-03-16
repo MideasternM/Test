@@ -558,7 +558,7 @@ class PTSegV2(nn.Module):
         num_classes=[3,4,6,9,15]
         for i in range(len(self.seg_heads)):
             res = self.seg_heads[i](feat)
-            res = res.reshape(16,num_classes[i],2048)
+            res = res.reshape(4,num_classes[i],2048)
             seg_logits.append(res)
         if return_feats: return seg_logits, feat
         return seg_logits

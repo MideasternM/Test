@@ -1064,57 +1064,52 @@ class PointTransformerV3(PointModule):
 
         # decoder
         if not self.cls_mode:
-            # dec_drop_path = [
-            #     x.item() for x in torch.linspace(0, drop_path, sum(dec_depths))
-            # ]
-            # self.dec = PointSequential()
-            # dec_channels = list(dec_channels) + [enc_channels[-1]]
-            # for s in reversed(range(self.num_stages - 1)):
-            #     dec_drop_path_ = dec_drop_path[
-            #         sum(dec_depths[:s]) : sum(dec_depths[: s + 1])
-            #     ]
-            #     dec_drop_path_.reverse()
-            #     dec = PointSequential()
-            #     dec.add(
-            #         SerializedUnpooling(
-            #             in_channels=dec_channels[s + 1],
-            #             skip_channels=enc_channels[s],
-            #             out_channels=dec_channels[s],
-            #             norm_layer=bn_layer,
-            #             act_layer=act_layer,
-            #         ),
-            #         name="up",
-            #     )
-            #     for i in range(dec_depths[s]):
-            #         dec.add(
-            #             Block(
-            #                 channels=dec_channels[s],
-            #                 num_heads=dec_num_head[s],
-            #                 patch_size=dec_patch_size[s],
-            #                 mlp_ratio=mlp_ratio,
-            #                 qkv_bias=qkv_bias,
-            #                 qk_scale=qk_scale,
-            #                 attn_drop=attn_drop,
-            #                 proj_drop=proj_drop,
-            #                 drop_path=dec_drop_path_[i],
-            #                 norm_layer=ln_layer,
-            #                 act_layer=act_layer,
-            #                 pre_norm=pre_norm,
-            #                 order_index=i % len(self.order),
-            #                 cpe_indice_key=f"stage{s}",
-            #                 enable_rpe=enable_rpe,
-            #                 enable_flash=enable_flash,
-            #                 upcast_attention=upcast_attention,
-            #                 upcast_softmax=upcast_softmax,
-            #             ),
-            #             name=f"block{i}",
-            #         )
-            #     self.dec.add(module=dec, name=f"dec{s}")
-            self.dec1 = Decoder()
-            # self.dec2 = Decoder()
-            # self.dec3 = Decoder()
-            # self.dec4 = Decoder()
-            # self.dec5 = Decoder()
+            dec_drop_path = [
+                x.item() for x in torch.linspace(0, drop_path, sum(dec_depths))
+            ]
+            self.dec = PointSequential()
+            dec_channels = list(dec_channels) + [enc_channels[-1]]
+            for s in reversed(range(self.num_stages - 1)):
+                dec_drop_path_ = dec_drop_path[
+                    sum(dec_depths[:s]) : sum(dec_depths[: s + 1])
+                ]
+                dec_drop_path_.reverse()
+                dec = PointSequential()
+                dec.add(
+                    SerializedUnpooling(
+                        in_channels=dec_channels[s + 1],
+                        skip_channels=enc_channels[s],
+                        out_channels=dec_channels[s],
+                        norm_layer=bn_layer,
+                        act_layer=act_layer,
+                    ),
+                    name="up",
+                )
+                for i in range(dec_depths[s]):
+                    dec.add(
+                        Block(
+                            channels=dec_channels[s],
+                            num_heads=dec_num_head[s],
+                            patch_size=dec_patch_size[s],
+                            mlp_ratio=mlp_ratio,
+                            qkv_bias=qkv_bias,
+                            qk_scale=qk_scale,
+                            attn_drop=attn_drop,
+                            proj_drop=proj_drop,
+                            drop_path=dec_drop_path_[i],
+                            norm_layer=ln_layer,
+                            act_layer=act_layer,
+                            pre_norm=pre_norm,
+                            order_index=i % len(self.order),
+                            cpe_indice_key=f"stage{s}",
+                            enable_rpe=enable_rpe,
+                            enable_flash=enable_flash,
+                            upcast_attention=upcast_attention,
+                            upcast_softmax=upcast_softmax,
+                        ),
+                        name=f"block{i}",
+                    )
+                self.dec.add(module=dec, name=f"dec{s}")
 
         self.seg_heads = nn.ModuleList()
         num_classes=[3,4,6,9,15]
@@ -1141,21 +1136,12 @@ class PointTransformerV3(PointModule):
 
         point = self.embedding(point)
         point = self.enc(point)
-        # point1 = deepcopy_point(point)
-        # point2 = deepcopy_point(point)
-        # point3 = deepcopy_point(point)
-        # point4 = deepcopy_point(point)
         if not self.cls_mode:
-            point = self.dec1(point)
-            # point1 = self.dec2(point1)
-            # point2 = self.dec3(point2)
-            # point3 = self.dec4(point3)
-            # point4 = self.dec5(point4)
-            # point_list = [point, point1, point2, point3, point4]
+            point = self.dec(point)
             seg_logits = []
             num_classes=[3,4,6,9,15]
             for i in range(len(self.seg_heads)):
                 res = self.seg_heads[i](point.feat)
-                res = res.reshape(8,num_classes[i],2048)
+                res = res.reshape(16,num_classes[i],2048)
                 seg_logits.append(res)
         return seg_logits

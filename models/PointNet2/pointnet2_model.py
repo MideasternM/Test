@@ -181,14 +181,20 @@ class PointNet2Encoder(nn.Module):
         self.sa3 = PointNetSetAbstraction(64, 0.4, 32, 128 + 3, [128, 128, 256], False)
         self.sa4 = PointNetSetAbstraction(16, 0.8, 32, 256 + 3, [256, 256, 512], False)
     
-    def forward(self, xyz):
+    def forward(self, xyz, prior=False, mask=None):
         l0_points = xyz
         l0_xyz = xyz[:, :3,:]
-
-        l1_xyz, l1_points = self.sa1(l0_xyz, l0_points)
-        l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
-        l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
-        l4_xyz, l4_points = self.sa4(l3_xyz, l3_points)
+        
+        if prior == True and mask != None:
+            l1_xyz, l1_points = self.sa1(l0_xyz, l0_points, mask)
+            l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
+            l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
+            l4_xyz, l4_points = self.sa4(l3_xyz, l3_points)
+        else:
+            l1_xyz, l1_points = self.sa1(l0_xyz, l0_points)
+            l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
+            l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
+            l4_xyz, l4_points = self.sa4(l3_xyz, l3_points)
         
         return l4_xyz, l4_points
     

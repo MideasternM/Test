@@ -33,7 +33,7 @@ class aux_branch(nn.Module):
 
     def split(self, num_class, label, points, level):
         level_info = []
-        # label = torch.chunk(label, level, dim=2)
+        label = torch.chunk(label, level, dim=2)
         for i in range(level):
             feat = []
             coord = []
@@ -48,25 +48,37 @@ class aux_branch(nn.Module):
                     continue
                 batch_idx = index[:, 0]
                 point_idx = index[:, 1]
-                selected = points[batch_idx, 3:, point_idx]
-                selected_coord = points[batch_idx, :3, point_idx]
+                selected = points[batch_idx, :, point_idx]
                 point_num = selected.shape[0]
                 if 0 < point_num < 256:
                     required = 256 - point_num
                     select_index = torch.randint(0, point_num, (required,))
                     sampled_points = selected[select_index]
-                    sampled_coord = selected_coord[select_index]
                     selected = torch.cat([selected, sampled_points], dim=0)
-                    selected_coord = torch.cat([selected_coord, sampled_coord], dim=0)
                     point_num = 256
                 feat.append(selected)
-                coord.append(selected_coord)
                 offset.append(point_num)
                 class_index.append(j)
-            feat = torch.cat(feat,dim=0)
-            coord = torch.cat(coord,dim=0)
+            max_numpoints = max(tensor.shape[0] for tensor in feat)
+            padded = []
+            mask = []
+            for tensor in feat:
+                num_rows = tensor.shape[0]
+                class_mask = torch.zeros((max_numpoints,))
+                class_mask[:num_rows] = 1
+                if num_rows < max_numpoints:
+                    padding_rows = max_numpoints - num_rows
+                    res = torch.cat([tensor, torch.zeros(padding_rows,6)], dim=0)
+                    padded.append(res)
+                else:
+                    padded.append(tensor)
+                mask.append(class_mask)
+            padded = torch.stack(padded, dim=0)
+            mask = torch.stack(mask, dim=0)
+            feat = padded[:,:,3:]
+            coord = padded[:,:,:3]
             offset = torch.cumsum(torch.IntTensor(offset), dim=0, dtype=torch.int32)
-            level_info.append([coord, feat, offset, class_index])
+            level_info.append([coord, feat, offset, class_index, mask])
         return level_info
 
     def forward(self, num_class, label, points, level):
@@ -75,24 +87,21 @@ class aux_branch(nn.Module):
         cur_feat = [[] for i in range(level)]
         for level_index, level_points in enumerate(level_info):
             class_index = level_info[level_index][-1]
-            point = level_points[:-2]
-            point = torch.cat(point,dim=1)
-            offset = level_points[-2]
+            point = level_points[:2]
+            point = torch.cat(point,dim=2)
+            offset = level_points[-3]
+            point = point.permute(0,2,1)
+            mask = level_points[-1]
             class_len = 0
-            for c, c_index in zip(offset, class_index):
-                end = c
-                begin = offset[class_len-1] if class_len-1>=0 else 0
-                c1 = point[begin:end]
-                c1 = c1.reshape(1,6,end - begin)
-                c_coord, c_feat = self.encoder(c1)
-                c_feat = c_feat.reshape(16,512)
-                c_feat = self.projection(c_feat)
-                c_feat = nn.functional.normalize(c_feat, dim=1)
-                self.ema(c_feat.detach(), cur_status, level_index, c_index-1)
-                c_feat = torch.cat([c_feat, torch.ones([c_feat.size(0),1], device=c_feat.device)*255], dim=1)
-                c_feat[:, -1] = c_index
-                cur_feat[level_index].append(c_feat)
-                class_len += 1
+            c_coord, c_feat = self.encoder(point, True, mask)
+            # c_feat = c_feat.permute(0,2,1)
+            c_feat = self.projection(c_feat)
+            c_feat = nn.functional.normalize(c_feat, dim=1)
+            # self.ema(c_feat.detach(), cur_status, level_index, c_index-1)
+            # c_feat = torch.cat([c_feat, torch.ones([c_feat.size(0),1], device=c_feat.device)*255], dim=1)
+            # c_feat[:, -1] = c_index
+            cur_feat[level_index].append(c_feat)
+            class_len += 1
             cur_feat[level_index] = torch.cat(cur_feat[level_index], dim=0)
         return cur_feat, self.prior_ema
 
@@ -107,7 +116,9 @@ if __name__ == "__main__":
 
     label = torch.stack((label_first, label_second, label_third), dim=-1)
 
-    points=torch.rand(16,6,2048)
+    points=torch.rand(16,3,2048)
+    coord = torch.rand(16,3,2048)
+    points = torch.cat([coord,points],dim=1)
     print(torch.version.cuda)
 
     aux = aux_branch(3,num_class)
