@@ -4,7 +4,7 @@ import traceback
 class ConfusionMatrix(object):
     def __init__(self, label_range):
         self.confusion_matrix = np.zeros((len(label_range), len(label_range)),
-                                         dtype=np.int)
+                                         dtype=int)
         self.label_range = label_range
 
     def update(self, pred, target):
@@ -47,7 +47,7 @@ class HierarchicalConsistency(object):
     def cal_consistency_proportion_per_point(h_matrix, labels):
         num_pts = labels.shape[0]
         leaf_length = h_matrix.classes_num[-1]
-        all_score = np.zeros((num_pts, leaf_length), dtype=np.int)
+        all_score = np.zeros((num_pts, leaf_length), dtype=int)
         for i in range(leaf_length):
             one_path = h_matrix.all_valid_h_label[i]
             all_score[:, i] = np.sum(labels == one_path, axis=1)
@@ -173,8 +173,8 @@ class IouMetric:
     def _average_iou(iou):
         mask = iou != -1
         if np.sum(mask) == 0:
-            return np.sum(mask).astype(np.float)
-        return np.sum(iou[mask]) / np.sum(mask).astype(np.float)
+            return np.sum(mask).astype(float)
+        return np.sum(iou[mask]) / np.sum(mask).astype(float)
 
 def iou_compare(best_mean_iou, best_class_iou, mean_iou, class_iou):
     if len(best_mean_iou) == 0:

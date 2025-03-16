@@ -1,0 +1,43 @@
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 1.357130
+batch: 400, _loss: 1.505212
+batch: 600, _loss: 1.688136
+batch: 800, _loss: 1.387465
+batch: 1000, _loss: 1.398772
+batch: 1200, _loss: 1.428977
+Using GPU : 0 from 1 devices
+length of train loader: 3647
+___________________epoch 0_____________________
+batch: 200, _loss: 1.380865
+batch: 400, _loss: 1.468929
+batch: 600, _loss: 1.696075
+batch: 800, _loss: 1.401682
+batch: 1000, _loss: 1.378227
+batch: 1200, _loss: 1.435304
+batch: 1400, _loss: 1.379152
+batch: 1600, _loss: 1.414173
+batch: 1800, _loss: 1.497715
+batch: 2000, _loss: 1.528986
+batch: 2200, _loss: 1.421823
+batch: 2400, _loss: 1.332873
+batch: 2600, _loss: 1.503282
+batch: 2800, _loss: 1.368065
+batch: 3000, _loss: 1.359334
+batch: 3200, _loss: 1.313212
+batch: 3400, _loss: 1.397255
+batch: 3600, _loss: 1.436465
+train 0, loss: 0.089497
+test aver acc: {0: tensor(0.), 1: tensor(0.), 2: tensor(0.1860), 3: tensor(0.), 4: tensor(0.)}
+eval avg class IoU: 0.0
+0.0
+0.05034064523293399
+0.0
+0.0
+___________________epoch 1_____________________
+batch: 200, _loss: 1.455545
+batch: 400, _loss: 1.452533

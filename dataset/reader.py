@@ -144,7 +144,7 @@ class FileDataReader:
             assert len(label_list[i]) == self.points.shape[0], \
                         "Labels dimension and points dimension are not matched."
         if len(label_list) == 0:
-            self.labels = np.asarray([np.zeros(len(self.points)).astype(np.int)])
+            self.labels = np.asarray([np.zeros(len(self.points)).astype(int)])
             self.__remove_zero = False
         else:
             self.labels = np.asarray(label_list).transpose()
@@ -199,7 +199,7 @@ class HierarchicalMatrixReader(object):
         self.project_matrices = []
         if matrices is not None:
             self.hierarchical_matrices = np.asarray(matrices,
-                                                    dtype=np.object)
+                                                    dtype=object)
         elif files is not None:
             self.load_files(files)
         else:
@@ -211,7 +211,7 @@ class HierarchicalMatrixReader(object):
         self.all_valid_h_label = self._cal_valid_path()
 
     def load_files(self, files):
-        self.hierarchical_matrices = np.empty((len(files),), dtype=np.object)
+        self.hierarchical_matrices = np.empty((len(files),), dtype=object)
         for i, f in enumerate(files):
             m = np.loadtxt(f, delimiter=',')
             self.hierarchical_matrices[i] = m
@@ -226,9 +226,9 @@ class HierarchicalMatrixReader(object):
     def _cal_valid_path(self):
         leaf_length = self.classes_num[-1]
         layer_num = self.layer_num
-        all_valid_path = np.zeros((leaf_length, layer_num), dtype=np.int)
+        all_valid_path = np.zeros((leaf_length, layer_num), dtype=int)
         for i in range(leaf_length):
-            leaf_label = np.array([i], dtype=np.int)
+            leaf_label = np.array([i], dtype=int)
             for j in range(layer_num):
                 all_valid_path[i, j] = self.projet_label(leaf_label, -1, j)
         return all_valid_path
@@ -250,7 +250,7 @@ class HierarchicalMatrixReader(object):
         return np.clip(np.dot(matrix1, matrix2.transpose()).transpose(), 0, 1)
 
     def _all_label_project(self):
-        self.project_matrices = np.empty(self.get_size(), dtype=np.object)
+        self.project_matrices = np.empty(self.get_size(), dtype=object)
         for i in range(self.project_matrices.shape[0]):
             for j in range(self.project_matrices.shape[1]):
                 self.project_matrices[i, j] = \
