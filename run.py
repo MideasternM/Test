@@ -22,8 +22,6 @@ from DataPreProcessing import DataProcess
 from DataAug import AugmentedData
 from pseudo_label import gen_label
 from collections import OrderedDict
-import matplotlib.pyplot as plt
-import matplotlib
 
 
 def _init_():
@@ -190,31 +188,31 @@ def train(args, io, cfg, HM):
                     "grid_size" : 0.01
                 }
 
-            # seg_pred, feat, prototype, prior_feat, prior_prototype= model(points_clrs, labels)
+            seg_pred, feat, prototype, prior_feat, prior_prototype = model(points_clrs, labels)
             if args.model == 'point_transformer':
                 # scaler = GradScaler()
                 # with autocast():
                 seg_pred = model(coord, feat, offset)
             elif args.model == 'pt_v3':
                 seg_pred = model(input)
-            else:
-                seg_pred = model(points_clrs, labels)
+            # else:
+            #     seg_pred = model(points_clrs, labels)
             # seg_pred_tea, feat_tea, prototype_tea = model_tea(points_clrs, labels)
             con_loss = []
             prior_fea_target = []
             loss_prior = []
             loss_main = []
-            # for i in range(3):
-            #     loss_i = sup_con_loss(prior_feat[i][:,:-1],prior_feat[i][:,-1])
-            #     con_loss.append(loss_i)
-            #     indices = prior_feat[i][:, -1].long()
-            #     prototype[i] = prototype[i].to(prior_feat[i].device)
-            #     prior_fea_target.append(prototype[i][indices, :])
-            #     loss_prior.append(l1_loss(prior_feat[i][:,:-1], prior_fea_target[i]))
-            #     prior_prototype[i] = prior_prototype[i].to(prior_feat[i].device)
-            #     target_main_feas = prior_prototype[i][labels[i+2], :]
-            #     target_main_feas = target_main_feas.squeeze(dim=2)
-            #     loss_main.append(l1_loss(feat, target_main_feas))
+            for i in range(3):
+                loss_i = sup_con_loss(prior_feat[i][:,:-1],prior_feat[i][:,-1])
+                con_loss.append(loss_i)
+                indices = prior_feat[i][:, -1].long()
+                prototype[i] = prototype[i].to(prior_feat[i].device)
+                prior_fea_target.append(prototype[i][indices, :])
+                loss_prior.append(l1_loss(prior_feat[i][:,:-1], prior_fea_target[i]))
+                prior_prototype[i] = prior_prototype[i].to(prior_feat[i].device)
+                target_main_feas = prior_prototype[i][labels[i+2], :]
+                target_main_feas = target_main_feas.squeeze(dim=2)
+                loss_main.append(l1_loss(feat, target_main_feas))
 
             MTLoss = 0.
             MTLoss_tea = 0.
@@ -229,8 +227,8 @@ def train(args, io, cfg, HM):
                     MTLoss += HCrossEntropy(seg_pred_i, labels[i], level=i) * level_weights[i]
                     # p_loss = HCrossEntropy(seg_pred_i_1, p_label, level=i) * level_weights[i]
                     # MTLoss += p_loss
-                    # if i > 2:
-                    #     MTLoss += loss_main[i-2] + loss_prior[i-2] + con_loss[i-2]
+                    if i >= 2:
+                        MTLoss += loss_main[i-2] + loss_prior[i-2] + con_loss[i-2]
             else:
                 seg_pred = seg_pred.permute(0, 2, 1).contiguous()
                 # seg_pred_tea = seg_pred_tea.permute(0, 2, 1).contiguous()

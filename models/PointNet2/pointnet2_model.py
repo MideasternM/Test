@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from .pointnet_util import PointNetSetAbstraction, PointNetFeaturePropagation
 from torch_scatter import segment_csr
+import time
 
 class PointNet2(nn.Module):
     def __init__(self, cfg=None, args=None):
@@ -11,15 +12,15 @@ class PointNet2(nn.Module):
         self.num_class = cfg.DATASET.DATA.LABEL_NUMBER
         self.level = args.mc_level
         self.beta = 0.999
-        # self.aux = aux_branch(3, self.num_class)
-        # with torch.no_grad():
-        #     prototypes = []
-        #     for level_classes in self.num_class[2:]:
-        #         level_prototypes = torch.rand(level_classes, 128, device='cuda:0')
-        #         prototypes.append(level_prototypes)
-        #     self.prior_ema = prototypes
-        #     for i in range(3):
-        #         self.prior_ema[i] = nn.functional.normalize(self.prior_ema[i], dim=1)
+        self.aux = aux_branch(3, self.num_class)
+        with torch.no_grad():
+            prototypes = []
+            for level_classes in self.num_class[2:]:
+                level_prototypes = torch.rand(level_classes, 128, device='cuda:0')
+                prototypes.append(level_prototypes)
+            self.prior_ema = prototypes
+            for i in range(3):
+                self.prior_ema[i] = nn.functional.normalize(self.prior_ema[i], dim=1)
         self.sa1 = PointNetSetAbstraction(1024, 0.1, 32, 6 + 3, [32, 32, 64], False)
         self.sa2 = PointNetSetAbstraction(256, 0.2, 32, 64 + 3, [64, 64, 128], False)
         self.sa3 = PointNetSetAbstraction(64, 0.4, 32, 128 + 3, [128, 128, 256], False)
@@ -104,27 +105,26 @@ class PointNet2(nn.Module):
             x3 = self.decoder3(*input_list)
             x4 = self.decoder4(*input_list)
             logits = [x0, x1, x2, x3, x4]
-            # if self.training:
-            #     prior_feat, prior_prototype = self.aux(self.num_class, labels[2:5], xyz, 3)
-            #     feat = self.decoder(*input_list)
-            #     feat = feat.permute(0, 2, 1)
-            #     feat = F.normalize(feat, dim=1)
+            if self.training:
+                prior_feat, prior_prototype = self.aux(self.num_class, labels[2:5], xyz, 3)
+                feat = self.decoder(*input_list)
+                feat = feat.permute(0, 2, 1)
+                feat = F.normalize(feat, dim=1)
 
-            #     cur_status = [p.clone() for p in self.prior_ema]
-            #     labels = [label.squeeze(dim=2) for label in labels]
+                cur_status = [p.clone() for p in self.prior_ema]
+                labels = [label.squeeze(dim=2) for label in labels]
 
-            #     for i in range(2,5):
-            #         level = i - 2
-            #         pred_class = logits[i].argmax(dim=1)
-            #         correct_mask = (pred_class == labels[i])
-            #         if correct_mask.any():
-            #             correct_feat = feat[correct_mask]
-            #             correct_labels = labels[i][correct_mask]
-            #             self.ema_update(correct_feat, correct_labels, cur_status, level)
-
-            #     return logits, feat, self.prior_ema, prior_feat, prior_prototype
-            
-            return logits
+                for i in range(2,5):
+                    level = i - 2
+                    pred_class = logits[i].argmax(dim=1)
+                    correct_mask = (pred_class == labels[i])
+                    if correct_mask.any():
+                        correct_feat = feat[correct_mask]
+                        correct_labels = labels[i][correct_mask]
+                        self.ema_update(correct_feat, correct_labels, cur_status, level)
+                return logits, feat, self.prior_ema, prior_feat, prior_prototype
+            else:
+                return logits
             
 class PointNet2DecoderWithoutClsHead(nn.Module):
     def __init__(self):
@@ -185,16 +185,10 @@ class PointNet2Encoder(nn.Module):
         l0_points = xyz
         l0_xyz = xyz[:, :3,:]
         
-        if prior == True and mask != None:
-            l1_xyz, l1_points = self.sa1(l0_xyz, l0_points, mask)
-            l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
-            l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
-            l4_xyz, l4_points = self.sa4(l3_xyz, l3_points)
-        else:
-            l1_xyz, l1_points = self.sa1(l0_xyz, l0_points)
-            l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
-            l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
-            l4_xyz, l4_points = self.sa4(l3_xyz, l3_points)
+        l1_xyz, l1_points = self.sa1(l0_xyz, l0_points, mask)
+        l2_xyz, l2_points = self.sa2(l1_xyz, l1_points)
+        l3_xyz, l3_points = self.sa3(l2_xyz, l2_points)
+        l4_xyz, l4_points = self.sa4(l3_xyz, l3_points)
         
         return l4_xyz, l4_points
     
@@ -214,7 +208,7 @@ class aux_branch(nn.Module):
             prototypes = []
             for level_classes in num_class[2:5]:
                 num_classes_in_level = level_classes
-                level_prototypes = torch.rand(num_classes_in_level, 128, device="cuda:0")
+                level_prototypes = torch.rand(num_classes_in_level, 128)
                 prototypes.append(level_prototypes)
             self.prior_ema = prototypes
             for i in range(level):
@@ -227,79 +221,79 @@ class aux_branch(nn.Module):
 
     def split(self, num_class, label, points, level):
         level_info = []
+        # label = torch.chunk(label, level, dim=2)
         for i in range(level):
-            current_label = label[i].squeeze(-1)  # (B, N)
-            B, N = current_label.shape
-            
-            # Flatten labels and get sorted indices
-            label_flat = current_label.view(-1)
-            categories, inverse_indices, counts = torch.unique(
-                label_flat, return_inverse=True, return_counts=True)
-            
-            # Sort points by category
-            sorted_indices = torch.argsort(inverse_indices)
-            points_flat = points.permute(0, 2, 1).reshape(-1, points.size(1))[sorted_indices]
-            
-            # Split points into categories using cumulative counts
-            cum_counts = torch.cat([torch.tensor([0], device=points.device), counts.cumsum(0)])
-            
-            feat_list, coord_list, offset_list, class_index_list = [], [], [], []
-            for j in range(len(categories)):
-                start, end = cum_counts[j:j+2]
-                if (end - start) == 0:
+            feat = []
+            coord = []
+            offset = []
+            class_index = []
+            category = torch.unique(label[i])
+            for j in category:
+                label1=label[i].squeeze(-1)
+                index = (label1==j)
+                index = index.nonzero(as_tuple=False)
+                if index.size(0) == 0:
                     continue
-                
-                # Process category points
-                category_points = points_flat[start:end]
-                m = category_points.size(0)
-                
-                # Sample points to 256 if needed
-                if 0 < m < 256:
-                    indices = torch.randint(0, m, (256-m,), device=points.device)
-                    category_points = torch.cat([category_points, category_points[indices]])
-                
-                # Split features and coordinates
-                coord = category_points[:, :3]
-                feat = category_points[:, 3:]
-                
-                feat_list.append(feat)
-                coord_list.append(coord)
-                offset_list.append(category_points.size(0))
-                class_index_list.append(categories[j].item())
-            
-            # Concatenate results for this level
-            feat = torch.cat(feat_list)
-            coord = torch.cat(coord_list)
-            offset = torch.cumsum(torch.tensor(offset_list, dtype=torch.int32, device=points.device), 0)
-            level_info.append([coord, feat, offset, class_index_list])
-        
+                batch_idx = index[:, 0]
+                point_idx = index[:, 1]
+                selected = points[batch_idx, :, point_idx]
+                point_num = selected.shape[0]
+                if 0 < point_num < 256:
+                    required = 256 - point_num
+                    select_index = torch.randint(0, point_num, (required,))
+                    sampled_points = selected[select_index]
+                    selected = torch.cat([selected, sampled_points], dim=0)
+                    point_num = 256
+                feat.append(selected)
+                offset.append(point_num)
+                class_index.append(j)
+            max_numpoints = max(tensor.shape[0] for tensor in feat)
+            padded = []
+            mask = []
+            for tensor in feat:
+                num_rows = tensor.shape[0]
+                class_mask = torch.zeros((max_numpoints,))
+                class_mask[:num_rows] = 1
+                if num_rows < max_numpoints:
+                    padding_rows = max_numpoints - num_rows
+                    res = torch.cat([tensor, torch.zeros(padding_rows,6).to(device='cuda')], dim=0)
+                    padded.append(res)
+                else:
+                    padded.append(tensor)
+                mask.append(class_mask)
+            padded = torch.stack(padded, dim=0)
+            mask = torch.stack(mask, dim=0)
+            feat = padded[:,:,3:]
+            coord = padded[:,:,:3]
+            offset = torch.cumsum(torch.IntTensor(offset), dim=0, dtype=torch.int32)
+            level_info.append([coord, feat, offset, class_index, mask])
         return level_info
-
 
     def forward(self, num_class, label, points, level):
         level_info = self.split(num_class, label, points, level)
         cur_status = [p.clone() for p in self.prior_ema]
         cur_feat = [[] for i in range(level)]
         for level_index, level_points in enumerate(level_info):
-            class_index = level_info[level_index][-1]
-            point = level_points[:-2]
-            point = torch.cat(point,dim=1)
-            offset = level_points[-2]
+            class_index = level_info[level_index][-2]
+            point = level_points[:2]
+            point = torch.cat(point,dim=2)
+            offset = level_points[-3]
+            point = point.permute(0,2,1)
+            mask = level_points[-1]
             class_len = 0
-            for c, c_index in zip(offset, class_index):
-                end = c
-                begin = offset[class_len-1] if class_len-1>=0 else 0
-                c1 = point[begin:end]
-                c1 = c1.reshape(1,6,end - begin)
-                c_coord, c_feat = self.encoder(c1)
-                c_feat = c_feat.reshape(16,512)
-                c_feat = self.projection(c_feat)
-                c_feat = nn.functional.normalize(c_feat, dim=1)
-                self.ema(c_feat.detach(), cur_status, level_index, c_index-1)
-                c_feat = torch.cat([c_feat, torch.ones([c_feat.size(0),1], device=c_feat.device)*255], dim=1)
-                c_feat[:, -1] = c_index
-                cur_feat[level_index].append(c_feat)
-                class_len += 1
+            c_coord, c_feat = self.encoder(point, True, mask)
+            c_feat = c_feat.permute(0,2,1)
+            feat = []
+            for i in range(len(c_feat)):
+                proj_feat = self.projection(c_feat[i])
+                feat.append(nn.functional.normalize(proj_feat, dim=1))
+                self.ema(feat[i].detach(), cur_status, level_index, i)
+                feat[i] = torch.cat([feat[i], torch.ones([feat[i].size(0),1], device=feat[i].device)*255], dim=1)
+                feat[i][:, -1] = class_index[i]
+            feat = torch.stack(feat, dim=0)
+            feat = feat.reshape(feat.shape[0]*feat.shape[1], feat.shape[2])
+            cur_feat[level_index].append(feat)
+            class_len += 1
             cur_feat[level_index] = torch.cat(cur_feat[level_index], dim=0)
         return cur_feat, self.prior_ema
     

@@ -86,7 +86,7 @@ class aux_branch(nn.Module):
         cur_status = [p.clone() for p in self.prior_ema]
         cur_feat = [[] for i in range(level)]
         for level_index, level_points in enumerate(level_info):
-            class_index = level_info[level_index][-1]
+            class_index = level_info[level_index][-2]
             point = level_points[:2]
             point = torch.cat(point,dim=2)
             offset = level_points[-3]
@@ -94,13 +94,17 @@ class aux_branch(nn.Module):
             mask = level_points[-1]
             class_len = 0
             c_coord, c_feat = self.encoder(point, True, mask)
-            # c_feat = c_feat.permute(0,2,1)
-            c_feat = self.projection(c_feat)
-            c_feat = nn.functional.normalize(c_feat, dim=1)
-            # self.ema(c_feat.detach(), cur_status, level_index, c_index-1)
-            # c_feat = torch.cat([c_feat, torch.ones([c_feat.size(0),1], device=c_feat.device)*255], dim=1)
-            # c_feat[:, -1] = c_index
-            cur_feat[level_index].append(c_feat)
+            c_feat = c_feat.permute(0,2,1)
+            feat = []
+            for i in range(len(c_feat)):
+                proj_feat = self.projection(c_feat[i])
+                feat.append(nn.functional.normalize(proj_feat, dim=1))
+                self.ema(feat[i].detach(), cur_status, level_index, i)
+                feat[i] = torch.cat([feat[i], torch.ones([feat[i].size(0),1], device=feat[i].device)*255], dim=1)
+                feat[i][:, -1] = class_index[i]
+            feat = torch.stack(feat, dim=0)
+            feat = feat.reshape(feat.shape[0]*feat.shape[1], feat.shape[2])
+            cur_feat[level_index].append(feat)
             class_len += 1
             cur_feat[level_index] = torch.cat(cur_feat[level_index], dim=0)
         return cur_feat, self.prior_ema

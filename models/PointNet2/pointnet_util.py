@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
+import time
 
 def pc_normalize(pc):
     l = pc.shape[0]
@@ -87,6 +88,7 @@ def farthest_point_sample_prior(xyz, mask, npoint):
         centroids: sampled pointcloud index, [B, npoint]
     """
     device = xyz.device
+    mask = mask.to(device)
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
     distance = torch.ones(B, N).to(device) * 1e10
@@ -123,15 +125,16 @@ def query_ball_point(radius, nsample, xyz, new_xyz, mask=None):
     _, S, _ = new_xyz.shape
     group_idx = torch.arange(N, dtype=torch.long).to(device).view(1, 1, N).repeat([B, S, 1])
     sqrdists = square_distance(new_xyz, xyz)
-    if mask != None:
-        mask_expanded = mask.unsqueeze(1).expand(-1, sqrdists.shape[1], -1)
-        mask_expanded = mask_expanded==1
-        sqrdists[~mask_expanded] = 1e10
+    if mask is not None:
+        mask = mask == 1
+        sqrdists = torch.where(mask.unsqueeze(1).to(device='cuda'), sqrdists, torch.tensor(1e10, device=device))
     group_idx[sqrdists > radius ** 2] = N
     group_idx = group_idx.sort(dim=-1)[0][:, :, :nsample]
     group_first = group_idx[:, :, 0].view(B, S, 1).repeat([1, 1, nsample])
     mask = group_idx == N
     group_idx[mask] = group_first[mask]
+    mask = group_idx == N
+    group_idx[mask] = N - 1
     return group_idx
 
 
